@@ -1,0 +1,49 @@
+X:\NETIIAM\CampManagement\LogicLayer\bin\Debug\LogicLayer.dll
+X:\NETIIAM\CampManagement\LogicLayer\bin\Debug\LogicLayer.pdb
+X:\NETIIAM\CampManagement\LogicLayer\bin\Debug\DataAccessLayer.dll
+X:\NETIIAM\CampManagement\LogicLayer\bin\Debug\DataObjects.dll
+X:\NETIIAM\CampManagement\LogicLayer\bin\Debug\DataAccessLayer.pdb
+X:\NETIIAM\CampManagement\LogicLayer\bin\Debug\DataObjects.pdb
+X:\NETIIAM\CampManagement\LogicLayer\obj\Debug\LogicLayer.csprojAssemblyReference.cache
+X:\NETIIAM\CampManagement\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
+X:\NETIIAM\CampManagement\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
+X:\NETIIAM\CampManagement\LogicLayer\obj\Debug\LogicLayer.dll
+X:\NETIIAM\CampManagement\LogicLayer\obj\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\bin\Debug\LogicLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\bin\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\obj\Debug\LogicLayer.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\obj\Debug\LogicLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\LogicLayer\obj\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\LogicLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\obj\Debug\LogicLayer.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\obj\Debug\LogicLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\LogicLayer\obj\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\LogicLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\obj\Debug\LogicLayer.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\obj\Debug\LogicLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\obj\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataObjects.dll.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\LogicLayer.dll.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\EntityFramework.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\EntityFramework.xml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayer\bin\Debug\EntityFramework.SqlServer.xml

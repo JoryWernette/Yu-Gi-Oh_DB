@@ -1,0 +1,28 @@
+X:\NETIIAM\CampManagement\DataObjects\bin\Debug\DataObjects.dll
+X:\NETIIAM\CampManagement\DataObjects\bin\Debug\DataObjects.pdb
+X:\NETIIAM\CampManagement\DataObjects\obj\Debug\DataObjects.csprojAssemblyReference.cache
+X:\NETIIAM\CampManagement\DataObjects\obj\Debug\DataObjects.csproj.CoreCompileInputs.cache
+X:\NETIIAM\CampManagement\DataObjects\obj\Debug\DataObjects.dll
+X:\NETIIAM\CampManagement\DataObjects\obj\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\DataObjects\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\DataObjects\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\DataObjects\obj\Debug\DataObjects.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\DataObjects\obj\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\DataObjects\obj\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\DataObjects\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\DataObjects\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\DataObjects\obj\Debug\DataObjects.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\DataObjects\obj\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\DataObjects\obj\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\obj\Debug\DataObjects.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\obj\Debug\DataObjects.csproj.CoreCompileInputs.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\obj\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\obj\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\bin\Debug\DataObjects.dll.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\bin\Debug\EntityFramework.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\bin\Debug\EntityFramework.xml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataObjects\obj\Debug\DataObjects.csproj.CopyComplete

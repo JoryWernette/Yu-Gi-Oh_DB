@@ -1,0 +1,138 @@
+﻿<Window x:Class="WpfPresentation.frmAddCard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPresentation"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Add A New Card" Height="450" Width="800">
+    <Grid x:Name="grdAddNewCard">
+        <Grid.Background>
+            <ImageBrush ImageSource= "C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_MonsterTextPlate.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label VerticalAlignment="Center" Padding="50 0 10 0" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0">Card ID:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardID" IsReadOnly="False" BorderBrush="White" Grid.Row="1" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">LOB-EN001</TextBox>
+        <Label VerticalAlignment="Center" Padding="50 0 10 0" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0">Card ID:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardName" IsReadOnly="False" BorderBrush="White" Grid.Row="2" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">Blue-Eyes White Dragon</TextBox>
+        <Label VerticalAlignment="Center" Padding="50 0 10 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0">Card ID:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardCategory" IsReadOnly="False" BorderBrush="White" Grid.Row="3" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">Monster</TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0">Card Category:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardCardType" IsReadOnly="False" BorderBrush="White" Grid.Row="3" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">Monster</TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="0">Monster Type:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardMonsterType" IsReadOnly="False" BorderBrush="White" Grid.Row="4" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">Dragon</TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="0">Monster SubType:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardMonsterSubType" IsReadOnly="False" BorderBrush="White" Grid.Row="5" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="6" Grid.Column="0">Monster Attribute:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardMonsterAttribute" IsReadOnly="False" BorderBrush="White" Grid.Row="6" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">Light</TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="7" Grid.Column="0">Level / Rank:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardLevelRank" IsReadOnly="False" BorderBrush="White" Grid.Row="7" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">8</TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="8" Grid.Column="0">Attack:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardAttack" IsReadOnly="False" BorderBrush="White" Grid.Row="8" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">3000</TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="9" Grid.Column="0">Defense:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardDefense" IsReadOnly="False" BorderBrush="White" Grid.Row="9" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">2500</TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="10" Grid.Column="0">Pendulum Scale:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardPendulumScale" IsReadOnly="False" BorderBrush="White" Grid.Row="10" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="11" Grid.Column="0">Link Number:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardLinkNumber" IsReadOnly="False" BorderBrush="White" Grid.Row="11" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Right" Grid.Row="12" Grid.Column="0">Banlist Placement:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardBanlistPlacement" IsReadOnly="False" BorderBrush="White" Grid.Row="12" Grid.Column="1"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">Unlimited</TextBox>
+        <Label VerticalAlignment="Center" Padding="15 0 10 0" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2">Card Text:
+            <Label.Background>
+                <ImageBrush ImageSource="C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\images\Blank_Normal_Monster_NamePlate.jpg" Opacity="0.75"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="txtNewCardCardText" IsReadOnly="False" BorderBrush="White" Grid.Row="4" Grid.Column="2" Grid.RowSpan="7"
+                 Margin="5 5 20 5" HorizontalContentAlignment="Left" TextWrapping="WrapWithOverflow">This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.</TextBox>
+        <Button x:Name="btnSaveCard" Grid.Row="12"  Grid.Column="2"
+                            Margin="50 5"  HorizontalAlignment="Left">Save Card</Button>
+        <Button x:Name="btnCancelAddCard" Grid.Row="12"  Grid.Column="2"
+                            Margin="50 5"  HorizontalAlignment="Right" Click="btnCancelAddCard_Click">Cancel</Button>
+    </Grid>
+</Window>

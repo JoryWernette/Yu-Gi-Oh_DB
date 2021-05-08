@@ -1,0 +1,228 @@
+﻿@model DataObjects.Card
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create a Card</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CardID, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CardID, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CardID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CardName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CardName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CardName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CardCategory, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("Card Category", new List<SelectListItem>()
+                {
+                    new SelectListItem{ Text="Monster", Value = "Monster" },
+                    new SelectListItem{ Text="Spell", Value = "Spell" },
+                    new SelectListItem{ Text="Trap", Value = "Trap" }
+                })
+            @Html.ValidationMessageFor(model => model.CardCategory, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CardType, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.CardType, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.DropDownList("Card Type", new List<SelectListItem>()
+                {
+                    new SelectListItem{ Text="Normal", Value = "Normal" },
+                    new SelectListItem{ Text="Effect", Value = "Effect" },
+                    new SelectListItem{ Text="Fusion", Value = "Fusion" },
+                    new SelectListItem{ Text="Synchro", Value = "Synchro" },
+                    new SelectListItem{ Text="Xyz", Value = "Xyz" },
+                    new SelectListItem{ Text="Link", Value = "Link" },
+                    new SelectListItem{ Text="Ritual", Value = "Ritual" },
+                    new SelectListItem{ Text="Field", Value = "Field" },
+                    new SelectListItem{ Text="Quick-Effect", Value = "Quick-Effect" },
+                    new SelectListItem{ Text="Continuous", Value = "Continuous" },
+                    new SelectListItem{ Text="Counter", Value = "Counter" }
+                })
+            @Html.ValidationMessageFor(model => model.CardType, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MonsterType, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.MonsterType, new { htmlAttributes = new { @class = "form-control" } })*@
+
+
+            @*@if ()
+            {
+                //Check if the above ddl is not monster, then make this default to ""
+            }*@
+
+
+            @Html.DropDownList("Monster Type", new List<SelectListItem>()
+                {
+                    new SelectListItem{ Text="Aqua", Value = "Aqua" },
+                    new SelectListItem{ Text="Beast", Value = "Beast" },
+                    new SelectListItem{ Text="Beast-Warrior", Value = "Beast-Warrior" },
+                    new SelectListItem{ Text="Cyberse", Value = "Cyberse" },
+                    new SelectListItem{ Text="Dinosaur", Value = "Dinosaur" },
+                    new SelectListItem{ Text="Divine-Beast", Value = "Divine-Beast" },
+                    new SelectListItem{ Text="Dragon", Value = "Dragon" },
+                    new SelectListItem{ Text="Fairy", Value = "Fairy" },
+                    new SelectListItem{ Text="Fiend", Value = "Fiend" },
+                    new SelectListItem{ Text="Fish", Value = "Fish" },
+                    new SelectListItem{ Text="Insect", Value = "Insect" },
+                    new SelectListItem{ Text="Machine", Value = "Machine" },
+                    new SelectListItem{ Text="Plant", Value = "Plant" },
+                    new SelectListItem{ Text="Psychic", Value = "Psychic" },
+                    new SelectListItem{ Text="Pyro", Value = "Pyro" },
+                    new SelectListItem{ Text="Reptile", Value = "Reptile" },
+                    new SelectListItem{ Text="Rock", Value = "Rock" },
+                    new SelectListItem{ Text="Sea Serpent", Value = "Sea Serpent" },
+                    new SelectListItem{ Text="Spellcaster", Value = "Spellcaster" },
+                    new SelectListItem{ Text="Thunder", Value = "Thunder" },
+                    new SelectListItem{ Text="Warrior", Value = "Warrior" },
+                    new SelectListItem{ Text="Winged-Beast", Value = "Winged-Beast" },
+                    new SelectListItem{ Text="Wyrm", Value = "Wyrm" },
+                    new SelectListItem{ Text="Zombie", Value = "Zombie" },
+                    new SelectListItem{ Text="", Value = "" }
+                })
+            @Html.ValidationMessageFor(model => model.MonsterType, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MonsterSubType, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.MonsterSubType, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.DropDownList("Monster Sub-Type", new List<SelectListItem>()
+                {
+                    new SelectListItem{ Text="Flip", Value = "Flip" },
+                    new SelectListItem{ Text="Gemini", Value = "Gemini" },
+                    new SelectListItem{ Text="Pendulum", Value = "Pendulum" },
+                    new SelectListItem{ Text="Spirit", Value = "Spirit" },
+                    new SelectListItem{ Text="Toon", Value = "Toon" },
+                    new SelectListItem{ Text="Tuner", Value = "Tuner" },
+                    new SelectListItem{ Text="Union", Value = "Union" },
+                    new SelectListItem{ Text="", Value = "" }
+                })
+            @Html.ValidationMessageFor(model => model.MonsterSubType, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MonsterAttribute, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.MonsterAttribute, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.DropDownList("Monster Attribute", new List<SelectListItem>()
+                {
+                    new SelectListItem{ Text="Dark", Value = "Dark" },
+                    new SelectListItem{ Text="Divine", Value = "Divine" },
+                    new SelectListItem{ Text="Earth", Value = "Earth" },
+                    new SelectListItem{ Text="Fire", Value = "Fire" },
+                    new SelectListItem{ Text="Light", Value = "Light" },
+                    new SelectListItem{ Text="Water", Value = "Water" },
+                    new SelectListItem{ Text="Wind", Value = "Wind" },
+                    new SelectListItem{ Text="", Value = "" }
+                })
+            @Html.ValidationMessageFor(model => model.MonsterAttribute, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LevelRank, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LevelRank, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LevelRank, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Attack, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Attack, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Attack, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Defense, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Defense, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Defense, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PendulumScale, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.PendulumScale, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PendulumScale, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LinkNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LinkNumber, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LinkNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.BanlistPlacement, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.BanlistPlacement, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.DropDownList("Banlist Placement", new List<SelectListItem>()
+                {
+                    new SelectListItem{ Text="Unlimited", Value = "Unlimited" },
+                    new SelectListItem{ Text="Semi-Limited", Value = "Semi-Limited" },
+                    new SelectListItem{ Text="Limited", Value = "Limited" },
+                    new SelectListItem{ Text="Forbidden", Value = "Forbidden" }
+                })
+            @Html.ValidationMessageFor(model => model.BanlistPlacement, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CardText, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CardText, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CardText, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Add to Database" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to Cards List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

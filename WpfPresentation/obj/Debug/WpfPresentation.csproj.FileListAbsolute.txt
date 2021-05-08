@@ -1,0 +1,121 @@
+X:\NETIIAM\CampManagement\WpfPresentation\bin\Debug\WpfPresentation.exe.config
+X:\NETIIAM\CampManagement\WpfPresentation\bin\Debug\WpfPresentation.exe
+X:\NETIIAM\CampManagement\WpfPresentation\bin\Debug\WpfPresentation.pdb
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.csprojAssemblyReference.cache
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\MainWindow.g.cs
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\App.g.cs
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation_MarkupCompile.cache
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation_MarkupCompile.lref
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\MainWindow.baml
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.g.resources
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.Properties.Resources.resources
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.csproj.GenerateResource.cache
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.csproj.CoreCompileInputs.cache
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.exe
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.pdb
+X:\NETIIAM\CampManagement\WpfPresentation\bin\Debug\DataObjects.dll
+X:\NETIIAM\CampManagement\WpfPresentation\bin\Debug\LogicLayer.dll
+X:\NETIIAM\CampManagement\WpfPresentation\bin\Debug\DataObjects.pdb
+X:\NETIIAM\CampManagement\WpfPresentation\bin\Debug\LogicLayer.pdb
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.csproj.CopyComplete
+X:\NETIIAM\CampManagement\WpfPresentation\bin\Debug\DataAccessLayer.dll
+X:\NETIIAM\CampManagement\WpfPresentation\bin\Debug\DataAccessLayer.pdb
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\frmUpdatePassword.g.cs
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\frmUpdatePassword.baml
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\frmEmployeeDetailAddEdit.g.cs
+X:\NETIIAM\CampManagement\WpfPresentation\obj\Debug\frmEmployeeDetailAddEdit.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\bin\Debug\WpfPresentation.exe.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\bin\Debug\WpfPresentation.exe
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\bin\Debug\WpfPresentation.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\bin\Debug\LogicLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\bin\Debug\DataAccessLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\bin\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\bin\Debug\DataAccessLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\frmEmployeeDetailAddEdit.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\frmUpdatePassword.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\MainWindow.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\App.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\WpfPresentation_MarkupCompile.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\WpfPresentation_MarkupCompile.lref
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\frmEmployeeDetailAddEdit.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\frmUpdatePassword.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\MainWindow.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.g.resources
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.Properties.Resources.resources
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.csproj.GenerateResource.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.csproj.CopyComplete
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.exe
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\CampManagement10\CampManagement\WpfPresentation\obj\Debug\WpfPresentation.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\WpfPresentation.exe.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\WpfPresentation.exe
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\WpfPresentation.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\LogicLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataAccessLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataAccessLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmUpdatePassword.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\MainWindow.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\App.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation_MarkupCompile.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation_MarkupCompile.lref
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmUpdatePassword.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\MainWindow.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.g.resources
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.Properties.Resources.resources
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.csproj.GenerateResource.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.csproj.CopyComplete
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.exe
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmPlayerDetailAddEdit.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmPlayerDetailAddEdit.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmViewCard.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmViewCard.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmAddCard.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmAddCard.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmDeleteCard.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\ygo_db_project\Yu-Gi-Oh_DB\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmDeleteCard.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\WpfPresentation.exe.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\WpfPresentation.exe
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\WpfPresentation.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\LogicLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataAccessLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\LogicLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataAccessLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmAddCard.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmDeleteCard.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmPlayerDetailAddEdit.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmUpdatePassword.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmViewCard.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\MainWindow.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\App.g.cs
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation_MarkupCompile.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation_MarkupCompile.lref
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmAddCard.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmDeleteCard.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmPlayerDetailAddEdit.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmUpdatePassword.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\frmViewCard.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\MainWindow.baml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.g.resources
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.Properties.Resources.resources
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.csproj.GenerateResource.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.csproj.CoreCompileInputs.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.csproj.CopyComplete
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.exe
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\obj\Debug\WpfPresentation.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataObjects.dll.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\EntityFramework.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\LogicLayer.dll.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\EntityFramework.xml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WpfPresentation\bin\Debug\DataAccessLayer.dll.config
