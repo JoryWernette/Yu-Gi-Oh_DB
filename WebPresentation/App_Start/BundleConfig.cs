@@ -29,6 +29,14 @@ namespace WebPresentation
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap-sortable.css",
                       "~/Content/site.css"));
+
+
+            //These bundles are for the grid.mvc so my grids can be sortable and filterable
+            bundles.Add(new ScriptBundle("~/bundles/Gridmvc").Include(
+                "~/Scripts/gridmvc*"));
+
+            bundles.Add(new StyleBundle("~/Content/Gridmvc").Include(
+                            "~/Content/Gridmvc.css"));
         }
     }
 }

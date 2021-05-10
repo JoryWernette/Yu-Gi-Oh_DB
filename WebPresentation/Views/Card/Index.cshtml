@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<DataObjects.Card>
+@using GridMvc.Html
 
 @{
     ViewBag.Title = "Index";
@@ -24,114 +25,159 @@
     </p>
 }
 
-<div class="table-responsive sortable" id="cardListTable_Div" style="max-height: 80%; overflow: scroll;">
-    <table id="cardListTable" class="display table table-bordered table-condensed table-striped table-hover">
-        <thead>
-            <tr>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.CardName)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.CardCategory)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.CardType)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.MonsterType)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.MonsterSubType)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.MonsterAttribute)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.LevelRank)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.Attack)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.Defense)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.PendulumScale)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.LinkNumber)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.BanlistPlacement)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.CardText)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
+<div class="row">
+    <div class="col-md-12">
 
-        @foreach (var item in Model)
-        {
-            <tbody>
-                <tr>
-                    <td>
-                        <a href="https://yugipedia.com/wiki/@item.CardName" target="_blank">@Html.DisplayFor(modelItem => item.CardName)</a>
-                    </td>
-                    <td>
-                        <a href="https://yugipedia.com/wiki/@item.CardCategory" target="_blank">@Html.DisplayFor(modelItem => item.CardCategory)</a>
-                    </td>
-                    <td>
-                        <a href="https://yugipedia.com/wiki/@item.CardType _@item.CardCategory" target="_blank">@Html.DisplayFor(modelItem => item.CardType)
-                    </td>
-                    <td>
-                        <a href="https://yugipedia.com/wiki/@item.MonsterType" target="_blank">@Html.DisplayFor(modelItem => item.MonsterType)</a>
-                    </td>
-                    <td>
-                        <a href="https://yugipedia.com/wiki/@item.MonsterSubType _@item.CardCategory" target="_blank">@Html.DisplayFor(modelItem => item.MonsterSubType)</a>
-                    </td>
-                    <td>
-                        <a href="https://yugipedia.com/wiki/@item.MonsterAttribute" target="_blank">@Html.DisplayFor(modelItem => item.MonsterAttribute)</a>
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LevelRank)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Attack)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Defense)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PendulumScale)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LinkNumber)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.BanlistPlacement)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CardText)
-                    </td>
+        @Html.Grid(Model).Named("CardListTable").Columns(c =>
+   {
+       c.Add(x => x.CardName).Titled("Name").Filterable(true).Sortable(true).SetWidth(10).Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs
+           (o => Html.ActionLink(o.CardName, "CardNameLink", new
+           { cardName = o.CardName }));
 
-                    
-                    <td>
-                        @if (User.IsInRole("Judge") || User.IsInRole("Player"))
-                        {
-                            @Html.ActionLink("Add to My Collection", "AddToCollection", "Collection", new { cardName = item.CardName }, null)
-                        }
-                        @if (User.IsInRole("Judge"))
-                        { 
-                            <br />
-                            <br />
-                            @Html.ActionLink("Edit", "Edit", "Card", new { cardName = item.CardName }, null) 
-                            <br />
-                            @Html.ActionLink("Delete", "Delete", new { cardName = item.CardName }, null)
-                        }
-                    </td>
-                </tr>
-            </tbody>
-        }
-    </table>
+       c.Add(x => x.CardCategory).Titled("Category").Filterable(true).Sortable(true).SetWidth(10).Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs
+           (o => Html.ActionLink(o.CardCategory, "CategoryLink", new
+           { cardCategory = o.CardCategory }));
+
+       c.Add(x => x.CardType).Titled("Card Type").Filterable(true).Sortable(true).SetWidth(10).Encoded(false).Sanitized(true).SetWidth(30).RenderValueAs
+           (o => Html.ActionLink(o.CardType, "CardTypeLink", new
+           { cardType = o.CardType, cardCategory = o.CardCategory }));
+
+       c.Add(x => x.MonsterType).Titled("Type").Filterable(true).Sortable(true).SetWidth(10).Encoded(false).Sanitized(true).SetWidth(30);
+       //.RenderValueAs(o => Html.ActionLink(o.MonsterType, "TwoElementLink", new
+       //{ monsterType = o.MonsterType, cardCategory = o.CardCategory }));
+
+       c.Add(x => x.MonsterSubType).Titled("Sub Type").Filterable(true).Sortable(true).SetWidth(10).Encoded(false).Sanitized(true).SetWidth(30);
+       //.RenderValueAs(o => Html.ActionLink(o.MonsterSubType, "TwoElementLink", new
+       //    { monsterSubType = o.MonsterSubType, cardCategory = o.CardCategory })
+
+
+       c.Add(x => x.MonsterAttribute).Titled("Attr").Filterable(true).Sortable(true).SetWidth(10).Encoded(false).Sanitized(true).SetWidth(30);
+       //.RenderValueAs(o => Html.ActionLink(o.MonsterAttribute, "SingleElementLink", new
+       //{ monsterAttribute = o.MonsterAttribute }));
+
+       c.Add(x => x.LevelRank).Titled("LvlRank").Filterable(true).Sortable(true).SetWidth(10);
+       c.Add(x => x.Attack).Titled("Atk").Filterable(true).Sortable(true).SetWidth(10);
+       c.Add(x => x.Defense).Titled("Def").Filterable(true).Sortable(true).SetWidth(10);
+       c.Add(x => x.PendulumScale).Titled("Pen").Filterable(true).Sortable(true).SetWidth(10);
+       c.Add(x => x.LinkNumber).Titled("Link").Filterable(true).Sortable(true).SetWidth(10);
+       c.Add(x => x.BanlistPlacement).Titled("Ban").Filterable(true).Sortable(true).SetWidth(10);
+       c.Add(x => x.CardText).Titled("Text").Filterable(true).Sortable(true).SetWidth(10);
+       c.Add().Filterable(false).Sortable(false).Encoded(false).Sanitized(false).SetWidth(10).RenderValueAs
+            (o => Html.ActionLink("Edit", "Edit", new
+            { cardName = o.CardName}));
+   }).WithPaging(3).EmptyText("")
+
+    </div>
 </div>
+
+@*<div class="table-responsive sortable" id="cardListTable_Div" style="max-height: 80%; overflow: scroll;">
+        <table id="cardListTable" class="display table table-bordered table-condensed table-striped table-hover">
+            <thead>
+                <tr>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.CardName)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.CardCategory)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.CardType)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.MonsterType)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.MonsterSubType)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.MonsterAttribute)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.LevelRank)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.Attack)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.Defense)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.PendulumScale)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.LinkNumber)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.BanlistPlacement)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.CardText)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="https://yugipedia.com/wiki/@item.CardName" target="_blank">@Html.DisplayFor(modelItem => item.CardName)</a>
+                        </td>
+                        <td>
+                            <a href="https://yugipedia.com/wiki/@item.CardCategory" target="_blank">@Html.DisplayFor(modelItem => item.CardCategory)</a>
+                        </td>
+                        <td>
+                            <a href="https://yugipedia.com/wiki/@item.CardType _@item.CardCategory" target="_blank">@Html.DisplayFor(modelItem => item.CardType)
+                        </td>
+                        <td>
+                            <a href="https://yugipedia.com/wiki/@item.MonsterType" target="_blank">@Html.DisplayFor(modelItem => item.MonsterType)</a>
+                        </td>
+                        <td>
+                            <a href="https://yugipedia.com/wiki/@item.MonsterSubType _@item.CardCategory" target="_blank">@Html.DisplayFor(modelItem => item.MonsterSubType)</a>
+                        </td>
+                        <td>
+                            <a href="https://yugipedia.com/wiki/@item.MonsterAttribute" target="_blank">@Html.DisplayFor(modelItem => item.MonsterAttribute)</a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LevelRank)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Attack)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Defense)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PendulumScale)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LinkNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BanlistPlacement)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CardText)
+                        </td>
+
+
+                        <td>
+                            @if (User.IsInRole("Judge") || User.IsInRole("Player"))
+                            {
+                                @Html.ActionLink("Add to My Collection", "AddToCollection", "Collection", new { cardName = item.CardName }, null)
+                            }
+                            @if (User.IsInRole("Judge"))
+                            {
+                                <br />
+                                <br />
+                                @Html.ActionLink("Edit", "Edit", "Card", new { cardName = item.CardName }, null)
+                                <br />
+                                @Html.ActionLink("Delete", "Delete", new { cardName = item.CardName }, null)
+                            }
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>*@

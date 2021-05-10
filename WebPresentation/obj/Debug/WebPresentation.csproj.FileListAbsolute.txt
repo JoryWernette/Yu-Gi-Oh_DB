@@ -54,6 +54,7 @@ C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WebPresentation\b
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WebPresentation\bin\DataObjects.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WebPresentation\bin\EntityFramework.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WebPresentation\bin\EntityFramework.SqlServer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WebPresentation\bin\GridMvc.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WebPresentation\bin\LogicLayer.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WebPresentation\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\WebPresentation\bin\Microsoft.AspNet.Identity.EntityFramework.dll

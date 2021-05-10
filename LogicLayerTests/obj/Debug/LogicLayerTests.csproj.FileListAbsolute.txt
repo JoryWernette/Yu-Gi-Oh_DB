@@ -1,6 +1,7 @@
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\LogicLayerTests.dll.config
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\LogicLayerTests.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\LogicLayerTests.pdb
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\DataAccessFakes.dll
@@ -22,10 +23,14 @@ C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\b
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\EntityFramework.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\WebGrease.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\System.Web.WebPages.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\System.Web.Razor.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Antlr3.Runtime.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Newtonsoft.Json.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\DataAccessFakes.pdb
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\DataAccessLayer.pdb
@@ -53,6 +58,9 @@ C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\b
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\System.Web.WebPages.xml
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\System.Web.Razor.xml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Antlr3.Runtime.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\obj\Debug\LogicLayerTests.csprojAssemblyReference.cache
 C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\LogicLayerTests\obj\Debug\LogicLayerTests.csproj.CoreCompileInputs.cache

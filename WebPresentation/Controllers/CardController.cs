@@ -160,5 +160,44 @@ namespace WebPresentation.Controllers
 
             return RedirectToAction("Index");
         }
+
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Links the player to yugipedia at the article for the selected card
+        /// </summary>
+        public ActionResult CardNameLink(string cardName)
+        {
+            string href = "https://yugipedia.com/wiki/";
+            string url = href + cardName;
+            return Redirect(url);
+        }
+
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Links the player to yugipedia at the article for the selected card
+        /// </summary>
+        public ActionResult CategoryLink(string cardCategory)
+        {
+            string href = "https://yugipedia.com/wiki/";
+            string url = href + cardCategory;
+            return Redirect(url);
+        }
+
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Links the player to yugipedia at the article for the selected card
+        /// </summary>
+        public ActionResult CardTypeLink(string cardType, string cardCategory)
+        {
+            string href = "https://yugipedia.com/wiki/";
+            string url = href + cardType + "_" + cardCategory;
+            return Redirect(url);
+        }
     }
 }

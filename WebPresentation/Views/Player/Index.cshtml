@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<DataObjects.Player>
+@using GridMvc.Html
 
 @{
     ViewBag.Title = "Index";
@@ -9,59 +10,84 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<div class="table-responsive sortable" style="max-height: 80%; overflow: scroll;">
-    <table class="display table table-bordered table-condensed table-striped table-hover">
-        <thead>
-            <tr>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.KonamiID)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.Email)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.FirstName)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.LastName)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.PhoneNumber)
-                </th>
-                <th class="th-sm">
-                    @Html.DisplayNameFor(model => model.Active)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
 
-        @foreach (var item in Model)
-        {
-            <tbody>
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.KonamiID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FirstName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LastName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PhoneNumber)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Active)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Details", "Details", new { id = item.KonamiID })
-                    </td>
-                </tr>
-            </tbody>
-        }
-    </table>
+<div class="row">
+    <div class="col-md-12">
+
+        @Html.Grid(Model).Named("PlayerTable").Columns(c =>
+   {
+
+       c.Add(x => x.KonamiID).Titled("Konami ID").Filterable(true).Sortable(true);
+       c.Add(x => x.FirstName).Titled("First Name").Filterable(true).Sortable(true);
+       c.Add(x => x.LastName).Titled("Last Name").Filterable(true).Sortable(true);
+       c.Add(x => x.Email).Titled("Email").Filterable(true).Sortable(true);
+       c.Add(x => x.PhoneNumber).Titled("Phone Number").Filterable(true).Sortable(true);
+       c.Add(x => x.Active).Titled("Active").Filterable(true).Sortable(true);
+       c.Add().Filterable(false).Sortable(false).Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs
+            (o => Html.ActionLink("Details", "Details", new
+            { collectionID = o.KonamiID }));
+   }).WithPaging(10).EmptyText("No Data Found")
+
+    </div>
 </div>
+
+
+@*
+    This is the way I did it before learning about grid.MVC
+
+    <div class="table-responsive sortable" style="max-height: 80%; overflow: scroll;">
+        <table class="display table table-bordered table-condensed table-striped table-hover">
+            <thead>
+                <tr>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.KonamiID)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </th>
+                    <th class="th-sm">
+                        @Html.DisplayNameFor(model => model.Active)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.KonamiID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Active)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", new { id = item.KonamiID })
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>*@

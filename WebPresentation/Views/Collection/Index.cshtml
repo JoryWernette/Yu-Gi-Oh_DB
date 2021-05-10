@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<DataObjects.Collection>
+@using GridMvc.Html
 
 @{
     ViewBag.Title = "Index";
@@ -6,37 +7,57 @@
 
 <h2>My Collection</h2>
 
+<div class="row">
+    <div class="col-md-12">
 
-<div class="table-responsive sortable" id="cardListTable_Div" style="max-height: 80%; overflow: scroll;">
-    <table id="cardListTable" class="display table table-bordered table-condensed table-striped table-hover">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.CardName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CardLocation)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
+        @Html.Grid(Model).Named("MyCollectionTable").Columns(c =>
+   {
 
-        @foreach (var item in Model)
-        {
-            <tbody>
-                <tr>
-                    <td>
-                        <a href="https://yugipedia.com/wiki/@item.CardName" target="_blank">@Html.DisplayFor(modelItem => item.CardName)</a>
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CardLocation)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new {collectionID = item.CollectionID, cardName = item.CardName, email = User.Identity.Name, cardLocation = item.CardLocation })
-                    </td>
-                </tr>
-            </tbody>
-        }
+       c.Add(x => x.CardName).Titled("Card Name").Filterable(true).Sortable(true).SetWidth(50).Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs
+            (o => Html.ActionLink(o.CardName, "Link", new
+            { cardName = o.CardName }));
+       c.Add(x => x.CardLocation).Titled("Location").Filterable(true).Sortable(true).SetWidth(50);
+       c.Add().Filterable(false).Sortable(false).Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs
+            (o => Html.ActionLink("Edit", "Edit", new
+            { collectionID = o.CollectionID, cardName = o.CardName, email = User.Identity.Name, cardLocation = o.CardLocation }));
+   }).WithPaging(12).EmptyText("No Data Found")
 
-    </table>
+    </div>
 </div>
+
+@*
+    This is the way I did it before learning about grid.MVC
+    
+    <div class="table-responsive sortable" id="cardListTable_Div" style="max-height: 80%; overflow: scroll;">
+        <table id="cardListTable" class="display table table-bordered table-condensed table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CardName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CardLocation)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="https://yugipedia.com/wiki/@item.CardName" target="_blank">@Html.DisplayFor(modelItem => item.CardName)</a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CardLocation)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new {collectionID = item.CollectionID, cardName = item.CardName, email = User.Identity.Name, cardLocation = item.CardLocation })
+                        </td>
+                    </tr>
+                </tbody>
+            }
+
+        </table>
+    </div>*@
