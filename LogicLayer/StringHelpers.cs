@@ -1,4 +1,11 @@
-﻿using System;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// This is a helper method to assist with passwords
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +16,13 @@ namespace LogicLayer
 {
     public static class StringHelpers
     {
+
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is a helper method to assist with passwords
+        /// </summary>
         public static string SHA256Value(this string source)
         {
             string result = "";

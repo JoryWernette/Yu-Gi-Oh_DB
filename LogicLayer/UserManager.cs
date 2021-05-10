@@ -1,4 +1,11 @@
-﻿using System;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// Implements the User Manager interface
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +20,13 @@ namespace LogicLayer
     {
         // constructors and dependency class
         private IUserAccessor userAccessor;
+
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Default constructor initializes an accessor
+        /// </summary>
         public UserManager()
         {
             userAccessor = new UserAccessor();
@@ -22,6 +36,18 @@ namespace LogicLayer
             userAccessor = suppliedUserAccessor;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// a method to verify a user's password
+        /// </summary>
+        ///<param name="email">
+        ///The user accounts email
+        ///</param>
+        ///<param name="passwordHash">The users password</param>
+        ///<exception></exception>
+        ///<returns>the users userID</returns>
         public User AuthenticateUser(string email, string password)
         {
             // method returns a user object or null
@@ -54,6 +80,19 @@ namespace LogicLayer
             return user;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// a fake method for testing updating a password.
+        /// </summary>
+        ///<param name="email">
+        ///The user accounts email
+        ///</param>
+        ///<param name="oldPasswordHash">The users original password</param>
+        ///<param name="newPasswordHash">The users new password</param>
+        ///<exception></exception>
+        ///<returns>the users userID</returns>
         public bool UpdatePassword(User user, string oldPassword, string newPassword)
         {
             bool result = false;

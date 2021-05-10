@@ -23,7 +23,8 @@
         @Html.ActionLink("Create New", "Create")
     </p>
 }
-<div class="table-responsive sortable">
+
+<div class="table-responsive sortable" id="cardListTable_Div" style="max-height: 80%; overflow: scroll;">
     <table id="cardListTable" class="display table table-bordered table-condensed table-striped table-hover">
         <thead>
             <tr>
@@ -129,7 +130,6 @@
                             @Html.ActionLink("Delete", "Delete", new { cardName = item.CardName }, null)
                         }
                     </td>
-                    
                 </tr>
             </tbody>
         }

@@ -9,11 +9,22 @@ IF EXISTS (SELECT 1 FROM master.dbo.sysdatabases WHERE NAME = 'ygo_db')
 		Builds the database, related tables, 
 		and stored procedures for the Yu-Gi-Oh Database.
 
+-- <remarks>
+--	Jory A. Wernette 
+-- Updated: 2021/05/10
+--	Updated for MVC .Net 3 Final Project. Added comments
+-- </remarks>
+
 *********************************************************************/
 
 
 /*********************************************************************
 			DROPPING THE ygo_db DATABASE
+-- <summary>
+-- Jory A. Wernette
+--
+-- Drops the database in preperation to be rebuilt
+-- </summary>
 *********************************************************************/
 BEGIN 
 	DROP DATABASE ygo_db	
@@ -24,6 +35,11 @@ GO
 
 /*********************************************************************
 			CREATING the ygo_db DATABASE
+-- <summary>
+-- Jory A. Wernette
+--
+-- Rebuilds the ygo_db database for use
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the database ygo_db ***'
 GO
@@ -33,6 +49,11 @@ GO
 
 /*********************************************************************
 			USING the ygo_db DATABASE
+-- <summary>
+-- Jory A. Wernette
+--
+-- Assigns ygo_db as the DB in action
+-- </summary>
 *********************************************************************/
 print '' print '*** using database ygo_db ***'
 GO
@@ -42,6 +63,12 @@ GO
 
 /*********************************************************************
 			CREATING the Player table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Player Table
+-- Describes what makes up a Player
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the Player table ***'
 GO 
@@ -62,6 +89,11 @@ GO
 
 /*********************************************************************
 			INSERTING into the Player table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Adding test data to the Player table
+-- </summary>
 *********************************************************************/
 print '' print '*** creating Player data ***'
 GO
@@ -77,6 +109,12 @@ GO
 
 /*********************************************************************
 			CREATING the Role table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Role table
+-- Describes the Roles a Player might have
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the Role table ***'
 GO
@@ -90,6 +128,11 @@ GO
 
 /*********************************************************************
 			INSERTING data into the Role table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Adding Roles into the Role table
+-- </summary>
 *********************************************************************/
 print '' print '*** creating Role data ***'
 GO
@@ -102,6 +145,12 @@ GO
 
 /*********************************************************************
 			CREATING the PlayerRole table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the PlayerRole table
+-- This links a Player to a Role
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the PlayerRole table ***'
 GO
@@ -118,6 +167,12 @@ GO
 
 /*********************************************************************
 			INSERTING data into the PlayerRole table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Adding data to the PlayerRole table
+-- This assigns our first users their Roles
+-- </summary>
 *********************************************************************/
 print '' print '*** adding PlayerRole records ***'
 GO
@@ -145,6 +200,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_authenticate_user
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to authenticate a user
+-- using their email and the password hash
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_authenticate_user ***'
 GO
@@ -166,6 +227,11 @@ GO
 
 /*********************************************************************
 			CREATING sp_update_passwordhash
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to update a user's password
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_update_passwordhash ***'
 GO
@@ -188,6 +254,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_user_by_email
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to retrieve a user's information
+-- using their email as the search criteria
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_user_by_email ***'
 GO
@@ -206,6 +278,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_roles_by_konamiID
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to retrieve a user's information
+-- using their KonamiID as the search criteria
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_roles_by_konamiID ***'
 GO
@@ -224,6 +302,11 @@ GO
 
 /*********************************************************************
 			CREATING sp_update_player_profile_data
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to update a user's information
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_update_player_profile_data ***'
 GO
@@ -271,6 +354,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_insert_new_user
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the
+-- Judge Role to create a new Player profile for a user
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_insert_new_user ***'
 GO
@@ -294,6 +383,11 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_all_users
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to retrieve all user's information
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_all_users ***'
 GO
@@ -309,6 +403,11 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_users_by_active
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to retrieve all active user's information
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_users_by_active ***'
 GO
@@ -328,6 +427,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_players_by_id
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to retrieve a user's information
+-- using their KonamiID as the search criteria
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_players_by_id ***'
 GO
@@ -346,6 +451,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_reset_passwordhash
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the Judge Role
+-- to reset a Player's password
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_reset_passwordhash ***'
 GO
@@ -364,6 +475,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_reactivate_user
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the Judge Role
+-- to reactivate a Player's account
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_reactivate_user ***'
 GO
@@ -382,6 +499,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_add_playerrole
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the Judge Role
+-- to change the Roles assigned to a Player
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_add_playerrole ***'
 GO
@@ -402,6 +525,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_all_roles
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the Judge Role
+-- to see the possible Roles
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_all_roles ***'
 GO
@@ -416,6 +545,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_safely_remove_playerrole
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the Judge Role
+-- to safely remove a Role from a Player
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_safely_remove_playerrole ***'
 GO
@@ -449,6 +584,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_safely_deactivate_player
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the Judge Role
+-- to safely deactivate a Player's account
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_safely_deactivate_player ***'
 GO
@@ -482,6 +623,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_add_new_card
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the Judge Role
+-- to add a Card to the Databse
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_add_new_card ***'
 GO
@@ -514,6 +661,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_update_a_card
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the Judge Role
+-- to update a Card in the Database -mistake, errata...
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_update_a_card ***'
 GO
@@ -586,6 +739,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_update_a_cards_banlistplacement
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player with the Judge Role
+-- to rupdate a Cards' Banlist Placement when a new Banlist rolls out
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_update_a_cards_banlistplacement ***'
 GO
@@ -622,6 +781,11 @@ GO
 
 /*********************************************************************
 			CREATING the CardCategory table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Card Category Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the CardCategory table ***'
 GO 
@@ -635,6 +799,11 @@ GO
 
 /*********************************************************************
 			INSERTING data into the CardCategory table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Inserts data into the Card Category Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** inserting CardCategory data ***'
 GO
@@ -649,6 +818,11 @@ GO
 
 /*********************************************************************
 			CREATING the CardType table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Card Type Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the CardType table ***'
 GO 
@@ -662,6 +836,11 @@ GO
 
 /*********************************************************************
 			INSERTING data into the CardType table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Inserts data into the Card Type Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** inserting CardType data ***'
 GO
@@ -684,6 +863,11 @@ GO
 
 /*********************************************************************
 			CREATING the MonsterType table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Monster Type Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the MonsterType table ***'
 GO 
@@ -697,6 +881,11 @@ GO
 
 /*********************************************************************
 			INSERTING data into the MonsterType table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Inserts data into the Monster Type Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** inserting MonsterType data ***'
 GO
@@ -733,6 +922,11 @@ GO
 
 /*********************************************************************
 			CREATING the MonsterSubType table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Monster Sub Type Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the MonsterSubType table ***'
 GO 
@@ -746,6 +940,11 @@ GO
 
 /*********************************************************************
 			INSERTING data into the MonsterSubType table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Inserts data into the Monster Sub Type Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** inserting MonsterSubType data ***'
 GO
@@ -765,6 +964,11 @@ GO
 
 /*********************************************************************
 			CREATING the MonsterAttribute table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Monster Attribute Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the MonsterAttribute table ***'
 GO 
@@ -778,6 +982,11 @@ GO
 
 /*********************************************************************
 			INSERTING data into the MonsterAttribute table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Inserts data into the Monster Attribute Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** inserting MonsterAttribute data ***'
 GO
@@ -797,6 +1006,11 @@ GO
 
 /*********************************************************************
 			CREATING the BanlistPlacement table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Banlist Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the BanlistPlacement table ***'
 GO 
@@ -810,6 +1024,11 @@ GO
 
 /*********************************************************************
 			INSERTING data into the BanlistPlacement table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Inserts data into the Banlist Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** inserting BanlistPlacement data ***'
 GO
@@ -825,6 +1044,11 @@ GO
 
 /*********************************************************************
 			CREATING the Card table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Card Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the Card table ***'
 GO 
@@ -868,6 +1092,11 @@ GO
 
 /*********************************************************************
 			INSERTING data into the Card table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Inserts data into the Card Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** inserting Card data ***'
 GO
@@ -878,10 +1107,22 @@ INSERT INTO [dbo].[Card]
 	('[CardID]', '[CardName]', '[CardCategory]', '[CardType]', '[MonsterType]', '[MonsterSubType]', '[MonsterAttribute]', '[LevelRank]', '[Attack]', '[Defense]', '[PendulumScale]', '[LinkNumber', '[BanlistPlacement]', '[CardText]')
 	*/
 		('LOB-EN000', 'Tri-Horned Dragon', 'Monster', 'Normal', 'Dragon', '', 'Light', 8, 2850, 2350, '', '', 'Unlimited', 'An unworthy dragon with three sharp horns sprouting from its head.'),
+		
 		('LOB-EN001', 'Blue-Eyes White Dragon', 'Monster', 'Normal', 'Dragon', '', 'Light', 8, 3000, 2500
 		, '', '', 'Unlimited', 'This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.'),
+		
 		('LOB-EN002', 'Hitotsu-Me Giant', 'Monster', 'Normal', 'Beast-Warrior', '', 'Earth', 4, 1200, 1000
 		, '', '', 'Unlimited', 'A one-eyed behemoth with thick, powerful arms made for delivering punishing blows.'),
+		
+		('LOB-EN108', 'Man-Eater Bug', 'Monster', 'Effect', 'Insect', 'Flip', 'Earth', 2, 450, 600
+		, '', '', 'Unlimited', 'FLIP: Target 1 monster on the field; destroy that target.'),
+		
+		('LOB-EN053', 'Raigeki', 'Spell', 'Normal', '', '', '', 0, 0, 0
+		, '', '', 'Limited', 'Destroy all monsters your opponent controls.'),
+		
+		('LOB-EN058', 'Trap Hole', 'Trap', 'Normal', '', '', '', 0, 0, 0
+		, '', '', 'Unlimited', 'If the ATK of a monster summoned by your opponent (excluding Special Summon) is 1000 points or more, the monster is destroyed.'),
+		
 		('LOB-EN003', 'Flame Swordsman', 'Monster', 'Fusion', 'Warrior', '', 'Fire', 5, 1800, 1600
 		, '', '', 'Unlimited', '"Flame Manipulator" + "Masaki the Legendary Swordsman".')
 GO
@@ -900,6 +1141,11 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_all_cards
+-- <summary>
+-- Jory A. Wernette
+--
+-- Selects all cards
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_all_cards ***'
 GO
@@ -915,6 +1161,11 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_cards_by_banlist_placement
+-- <summary>
+-- Jory A. Wernette
+--
+-- Selects all Cards of a certain Banlist Placement
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_cards_by_banlist_placement ***'
 GO
@@ -932,6 +1183,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_card_by_card_name
+-- <summary>
+-- Jory A. Wernette
+--
+-- Selects all information about a single card
+-- based on its name
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_card_by_card_name ***'
 GO
@@ -950,6 +1207,11 @@ GO
 
 /*********************************************************************
 			CREATING the Collection table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the Collection Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** creating the Collection table ***'
 GO
@@ -963,6 +1225,11 @@ CREATE TABLE [dbo].[Collection](
 GO
 /*********************************************************************
 			INSERTING into the Collection table
+-- <summary>
+-- Jory A. Wernette
+--
+-- Inserts data into the Collection Table.
+-- </summary>
 *********************************************************************/
 print '' print '*** creating Collection data ***'
 GO
@@ -977,7 +1244,6 @@ VALUES
 	('admin@company.com', 'Blue-Eyes White Dragon', 'Blue-Eyes Deck'),
 	('admin@company.com', 'Blue-Eyes White Dragon', 'Blue-Eyes Deck'),
 	('admin@company.com', 'Flame Swordsman', 'Fusion Binder'),
-	('admin@company.com', 'Pot of Greed', 'Collector Binder'),
 	('admin@company.com', 'Raigeki', 'Collector Binder'),
 	('admin@company.com', 'Raigeki', 'Blue-Eyes Deck'),
 	('admin@company.com', 'Hitotsu-Me Giant', 'Collector Binder')
@@ -985,6 +1251,12 @@ GO
 
 /*********************************************************************
 			CREATING sp_select_my_collection_by_email
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates stored procedure to get collection records
+-- based on a user's email, building their 'collection'
+-- </summary>
 *********************************************************************/
 print '' print '*** creating sp_select_my_collection_by_email ***'
 GO
@@ -998,5 +1270,80 @@ AS
 		FROM 	Collection
 		WHERE Email = @Email
 		ORDER BY CardName ASC
+	END
+GO
+
+/*********************************************************************
+			CREATING sp_insert_card_to_collection
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to add a card to a Player's 
+-- collection
+-- </summary>
+*********************************************************************/
+print '' print '*** creating sp_insert_card_to_collection ***'
+GO
+CREATE PROCEDURE [dbo].[sp_insert_card_to_collection]
+(
+	@Email			[nvarchar](100),
+	@CardName		[nvarchar](75),
+	@CardLocation	[nvarchar](250)
+)
+AS
+	BEGIN
+		INSERT INTO [dbo].[Collection]
+			([Email], [CardName], [CardLocation])
+		VALUES
+			(@Email, @CardName, @CardLocation)
+	END
+GO
+
+/*********************************************************************
+			CREATING sp_edit_card_in_my_collection
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player to edit where
+-- they have a Card in their collection -moving from binder to deck...
+-- </summary>
+*********************************************************************/
+print '' print '*** creating sp_edit_card_in_my_collection ***'
+GO
+CREATE PROCEDURE [dbo].[sp_edit_card_in_my_collection]
+	(
+	@CollectionID	[int],
+	@NewCardLocation[nvarchar](250),
+	
+	@OldCardLocation[nvarchar](250)
+	)
+AS
+	BEGIN
+		UPDATE Collection
+			SET
+				CardLocation = @NewCardLocation		
+			WHERE CollectionID = @CollectionID
+				AND CardLocation = @OldCardLocation
+		RETURN @@ROWCOUNT
+	END
+GO
+
+/*********************************************************************
+			CREATING sp_delete_card_from_my_collection
+-- <summary>
+-- Jory A. Wernette
+--
+-- Creates the stored procedure to allow a Player to remove a card
+-- from their collection -traded it, sold it, lost it...
+-- </summary>
+*********************************************************************/
+CREATE PROCEDURE [dbo].[sp_delete_card_from_my_collection]
+	(
+	@CollectionID		  		[int]
+	)
+AS 
+	BEGIN
+		DELETE FROM Collection
+		WHERE CollectionID = @CollectionID
 	END
 GO

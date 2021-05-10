@@ -38,5 +38,7 @@ namespace WebPresentation.Models
         }
 
         public System.Data.Entity.DbSet<DataObjects.Card> Cards { get; set; }
+
+        public System.Data.Entity.DbSet<DataObjects.Collection> Collections { get; set; }
     }
 }

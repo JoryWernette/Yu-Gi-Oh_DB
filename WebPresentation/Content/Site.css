@@ -1,4 +1,13 @@
-﻿body {
+﻿/*
+/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// CSS for the Yu-Gi-Oh_DB project
+/// </summary>
+*/
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 
@@ -32,9 +41,6 @@ td {
     background-color: #b25126;
 }
 
-.cardListTable {
-    max-height: 30em;
-}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;

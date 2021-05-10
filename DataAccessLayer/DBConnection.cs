@@ -1,4 +1,12 @@
-﻿using System;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// This class creates a connection to the 
+/// databse
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +15,12 @@ using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
+    /// <summary>
+    /// Jory A. Wernette
+    /// Created: 2021/05/10
+    /// 
+    /// This method references the sql
+    /// </summary>
     internal static class DBConnection
     {
         // this is the only place to connect to the db

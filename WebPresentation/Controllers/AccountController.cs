@@ -1,4 +1,12 @@
-﻿using System;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+///     
+/// The controller for the
+/// Account action methods.
+/// </summary>
+
+using System;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -52,7 +60,12 @@ namespace WebPresentation.Controllers
             }
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user log into their account
+        /// </summary>
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
@@ -61,7 +74,12 @@ namespace WebPresentation.Controllers
             return View();
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user log into their account
+        /// </summary>
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
@@ -91,7 +109,12 @@ namespace WebPresentation.Controllers
             }
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Verifies a user
+        /// </summary>
         // GET: /Account/VerifyCode
         [AllowAnonymous]
         public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)
@@ -104,7 +127,12 @@ namespace WebPresentation.Controllers
             return View(new VerifyCodeViewModel { Provider = provider, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Verifies a user
+        /// </summary>
         // POST: /Account/VerifyCode
         [HttpPost]
         [AllowAnonymous]
@@ -134,7 +162,12 @@ namespace WebPresentation.Controllers
             }
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user register their account
+        /// </summary>
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
@@ -142,7 +175,12 @@ namespace WebPresentation.Controllers
             return View();
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user register their account
+        /// </summary>
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
@@ -177,7 +215,12 @@ namespace WebPresentation.Controllers
             return View(model);
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Confirms the user's email
+        /// </summary>
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
@@ -190,7 +233,12 @@ namespace WebPresentation.Controllers
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Begins forgot password process
+        /// </summary>
         // GET: /Account/ForgotPassword
         [AllowAnonymous]
         public ActionResult ForgotPassword()
@@ -198,7 +246,12 @@ namespace WebPresentation.Controllers
             return View();
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user reset their password
+        /// </summary>
         // POST: /Account/ForgotPassword
         [HttpPost]
         [AllowAnonymous]
@@ -226,7 +279,12 @@ namespace WebPresentation.Controllers
             return View(model);
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Begins the I forgot my password process
+        /// </summary>
         // GET: /Account/ForgotPasswordConfirmation
         [AllowAnonymous]
         public ActionResult ForgotPasswordConfirmation()
@@ -234,7 +292,12 @@ namespace WebPresentation.Controllers
             return View();
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user reset their password
+        /// </summary>
         // GET: /Account/ResetPassword
         [AllowAnonymous]
         public ActionResult ResetPassword(string code)
@@ -242,7 +305,12 @@ namespace WebPresentation.Controllers
             return code == null ? View("Error") : View();
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user reset their password
+        /// </summary>
         // POST: /Account/ResetPassword
         [HttpPost]
         [AllowAnonymous]
@@ -268,7 +336,12 @@ namespace WebPresentation.Controllers
             return View();
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Confirms user's reset password
+        /// </summary>
         // GET: /Account/ResetPasswordConfirmation
         [AllowAnonymous]
         public ActionResult ResetPasswordConfirmation()
@@ -276,7 +349,12 @@ namespace WebPresentation.Controllers
             return View();
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user log into their account
+        /// </summary>
         // POST: /Account/ExternalLogin
         [HttpPost]
         [AllowAnonymous]
@@ -287,7 +365,12 @@ namespace WebPresentation.Controllers
             return new ChallengeResult(provider, Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl }));
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Sends code to Verify a user
+        /// </summary>
         // GET: /Account/SendCode
         [AllowAnonymous]
         public async Task<ActionResult> SendCode(string returnUrl, bool rememberMe)
@@ -302,7 +385,12 @@ namespace WebPresentation.Controllers
             return View(new SendCodeViewModel { Providers = factorOptions, ReturnUrl = returnUrl, RememberMe = rememberMe });
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Sends code to Verify a user
+        /// </summary>
         // POST: /Account/SendCode
         [HttpPost]
         [AllowAnonymous]
@@ -322,7 +410,12 @@ namespace WebPresentation.Controllers
             return RedirectToAction("VerifyCode", new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user log into their account
+        /// </summary>
         // GET: /Account/ExternalLoginCallback
         [AllowAnonymous]
         public async Task<ActionResult> ExternalLoginCallback(string returnUrl)
@@ -352,7 +445,12 @@ namespace WebPresentation.Controllers
             }
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user log into their account
+        /// </summary>
         // POST: /Account/ExternalLoginConfirmation
         [HttpPost]
         [AllowAnonymous]
@@ -390,7 +488,12 @@ namespace WebPresentation.Controllers
             return View(model);
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Lets user log off of their account
+        /// </summary>
         // POST: /Account/LogOff
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -400,7 +503,12 @@ namespace WebPresentation.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        //
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Alerts a user that they failed to login
+        /// </summary>
         // GET: /Account/ExternalLoginFailure
         [AllowAnonymous]
         public ActionResult ExternalLoginFailure()
@@ -408,6 +516,12 @@ namespace WebPresentation.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Tears down any uneeded data
+        /// </summary>
         protected override void Dispose(bool disposing)
         {
             if (disposing)

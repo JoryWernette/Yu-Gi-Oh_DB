@@ -1,4 +1,11 @@
-﻿using System;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// Class for the creation of Card Objects with set data fields
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;

@@ -1,4 +1,12 @@
-﻿using DataObjects;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// This class accesses the Card data through
+/// the DBConnection class
+/// </summary>
+
+using DataObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +19,16 @@ namespace DataAccessLayer
 {
     public class CardAccessor : ICardAccessor
     {
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Inserts a new Card
+        /// </summary>
+        /// 
+        /// <param name="card"> The Card object to be added</param>
+        /// <exception>Card not inserted</exception>
+        /// <returns>an Bool signifying success or failuere</returns>
         public bool AddNewCard(Card card)
         {
             bool result = false;
@@ -70,6 +88,15 @@ namespace DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// selects all cards
+        /// </summary>
+        /// 
+        /// <exception>Card list not found</exception>
+        /// <returns>list of card objects</returns>
         public List<Card> SelectAllCards()
         {
             List<Card> cards = new List<Card>();
@@ -119,6 +146,16 @@ namespace DataAccessLayer
             return cards;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// selects a cards' information based on its name
+        /// </summary>
+        /// 
+        /// <param name="cardName"> the name of the card to be retrieved</param>
+        /// <exception>Card not found</exception>
+        /// <returns>Card object</returns>
         public Card SelectCardByCardName(string cardName)
         {
             Card card = new Card();
@@ -168,6 +205,16 @@ namespace DataAccessLayer
             return card;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// selects a cards' information based on its Banlist Placement
+        /// </summary>
+        /// 
+        /// <param name="banlistPlacement"> the Banlist Placement of the card to be retrieved</param>
+        /// <exception>Card not found</exception>
+        /// <returns>List of Card objects</returns>
         public List<Card> SelectCardsByBanlistPlacement(string banlistPlacement)
         {
             List<Card> cards = new List<Card>();
@@ -220,6 +267,17 @@ namespace DataAccessLayer
             return cards;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// updates a card.
+        /// </summary>
+        /// 
+        /// <param name="newCard"> The updated card data</param>
+        /// <param name="oldCard"> The old data to be overwritten</param>
+        /// <exception>Card not updated</exception>
+        /// <returns>an int signifying the rows affected</returns>
         public int UpdateACard(Card newCard, Card oldCard)
         {
             int rowsAffected;
@@ -303,6 +361,18 @@ namespace DataAccessLayer
             return rowsAffected;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// updates a card.
+        /// </summary>
+        /// 
+        /// <param name="cardName"> The name of a card to have its Banlist Placement updated</param>
+        /// <param name="oldBanlistPlacement"> The old data to be overwritten</param>
+        /// <param name="newBanlistPlacement"> The new data to be saved</param>
+        /// <exception>Card not updated</exception>
+        /// <returns>an int signifying the rows affected</returns>
         public int UpdateACardsBanlistPlacement(string cardName, string oldBanlistPlacement, string newBanlistPlacement)
         {
             int rows = 0;

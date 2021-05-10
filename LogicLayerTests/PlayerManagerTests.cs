@@ -1,4 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// This is the Class containing the Player Manager Test methods
+/// </summary>
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using DataObjects;
 using DataAccessLayer;
@@ -7,6 +14,13 @@ using System.Collections.Generic;
 
 namespace LogicLayerTests
 {
+
+    /// <summary>
+    /// Jory A. Wernette
+    /// Created: 2021/05/10
+    /// 
+    /// This is the Class containing the Player Manager Test methods
+    /// </summary>
     [TestClass]
     public class PlayerManagerTest
     {
@@ -22,12 +36,24 @@ namespace LogicLayerTests
 
         IPlayerAccessor playerAccessor;
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is method instantiates my PlayerAccessorFake for my tests.
+        /// </summary>
         [TestMethod]
         public void TestSetup()
         {
             playerAccessor = new PlayerAccessorFakes();
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing DeactivatePlayer.
+        /// </summary>
         [TestMethod]
         public void TestDeactivatePlayer()
         {
@@ -51,6 +77,13 @@ namespace LogicLayerTests
             Assert.AreEqual(1, result);
         }
 
+
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing ReactivatePlayer.
+        /// </summary>
         [TestMethod]
         public void TestReactivatePlayer()
         {
@@ -74,6 +107,12 @@ namespace LogicLayerTests
             Assert.AreEqual(1, result);
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing InsertNewPlayer.
+        /// </summary>
         [TestMethod]
         public void TestInsertNewPlayer()
         {
@@ -97,6 +136,12 @@ namespace LogicLayerTests
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing SelectPlayerByKonamiID.
+        /// </summary>
         [TestMethod]
         public void TestSelectPlayerByKonamiID()
         {

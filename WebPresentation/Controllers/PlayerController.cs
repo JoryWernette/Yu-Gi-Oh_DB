@@ -1,4 +1,12 @@
-﻿using DataObjects;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+///     
+/// The controller for the
+/// Player action methods.
+/// </summary>
+
+using DataObjects;
 using LogicLayer;
 using System;
 using System.Collections.Generic;
@@ -12,6 +20,12 @@ namespace WebPresentation.Controllers
     {
         PlayerManager playerManager = new PlayerManager();
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Takes a Judge to the view all Players page
+        /// </summary>
         // GET: Player
         public ActionResult Index()
         {
@@ -21,6 +35,12 @@ namespace WebPresentation.Controllers
             return View(PlayerList);
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Takes a Judge to the Player details page
+        /// </summary>
         // GET: Player/Details/5
         public ActionResult Details(int id)
         {

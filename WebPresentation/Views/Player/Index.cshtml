@@ -9,53 +9,59 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.KonamiID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Active)
-        </th>
-        <th></th>
-    </tr>
+<div class="table-responsive sortable" style="max-height: 80%; overflow: scroll;">
+    <table class="display table table-bordered table-condensed table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="th-sm">
+                    @Html.DisplayNameFor(model => model.KonamiID)
+                </th>
+                <th class="th-sm">
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th class="th-sm">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th class="th-sm">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th class="th-sm">
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </th>
+                <th class="th-sm">
+                    @Html.DisplayNameFor(model => model.Active)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.KonamiID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Active)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.KonamiID })
-        </td>
-    </tr>
-}
-
-</table>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KonamiID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Active)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.KonamiID })
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+</div>

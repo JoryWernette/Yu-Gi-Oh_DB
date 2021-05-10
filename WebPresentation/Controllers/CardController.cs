@@ -1,4 +1,12 @@
-﻿using System;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+///     
+/// The controller for the
+/// Card action methods.
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +20,12 @@ namespace WebPresentation.Controllers
     {
         CardManager cardManager = new CardManager();
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Shows a user a list of cards in the DB
+        /// </summary>
         // GET: Card List
         public ActionResult Index()
         {
@@ -21,12 +35,23 @@ namespace WebPresentation.Controllers
             return View(CardList);
         }
 
-
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Takes a Judge to the create a card page
+        /// </summary>
         public ActionResult Create()
         {
             return View();
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Accepts a Judge's information from the create a card page
+        /// </summary>
         [HttpPost]
         public ActionResult Create(Card card, FormCollection form)
         {
@@ -64,6 +89,12 @@ namespace WebPresentation.Controllers
             return RedirectToAction("Index");
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Takes a Judge to the edit a card page
+        /// </summary>
         public ActionResult Edit(string cardName)
         {
             Card card = new Card();
@@ -84,6 +115,12 @@ namespace WebPresentation.Controllers
             return View("Index");
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Accepts a Judge's information from the edit a card page
+        /// </summary>
         [HttpPost]
         public ActionResult Edit(Card newCard, FormCollection form)
         {

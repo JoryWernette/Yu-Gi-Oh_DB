@@ -1,4 +1,12 @@
-﻿using System;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// This class accesses the user data through
+/// the DBConnection class
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +19,16 @@ namespace DataAccessLayer
 {
     public class UserAccessor : IUserAccessor
     {
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// a fake method used to reactivate a Player's account.
+        /// </summary>
+        /// 
+        /// <param name="email"> The email of the Player whose account will be retrieved</param>
+        /// <exception>User could not be retrieved</exception>
+        /// <returns>a user object</returns>
         public User SelectUserByEmail(string email)
         {
             User user = null;
@@ -73,6 +91,18 @@ namespace DataAccessLayer
             return user;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// a method to verify a user's password
+        /// </summary>
+        ///<param name="email">
+        ///The user accounts email
+        ///</param>
+        ///<param name="passwordHash">The users password</param>
+        ///<exception></exception>
+        ///<returns>the users userID</returns>
         public int VerifyUserNameAndPassword(string email, string passwordHash)
         {
             int result = 0; // verification will falsify this
@@ -116,6 +146,19 @@ namespace DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// a fake method for testing updating a password.
+        /// </summary>
+        ///<param name="email">
+        ///The user accounts email
+        ///</param>
+        ///<param name="oldPasswordHash">The users original password</param>
+        ///<param name="newPasswordHash">The users new password</param>
+        ///<exception></exception>
+        ///<returns>the users userID</returns>
         public int UpdatePasswordHash(string email, string newPasswordHash, string oldPasswordHash)
         {
             int result = 0;

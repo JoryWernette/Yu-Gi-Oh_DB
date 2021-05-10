@@ -7,31 +7,36 @@
 <h2>My Collection</h2>
 
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CardName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CardLocation)
-        </th>
-        <th></th>
-    </tr>
+<div class="table-responsive sortable" id="cardListTable_Div" style="max-height: 80%; overflow: scroll;">
+    <table id="cardListTable" class="display table table-bordered table-condensed table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CardName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CardLocation)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CardName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CardLocation)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CardName }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CardName }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CardName })
-        </td>
-    </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="https://yugipedia.com/wiki/@item.CardName" target="_blank">@Html.DisplayFor(modelItem => item.CardName)</a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CardLocation)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new {collectionID = item.CollectionID, cardName = item.CardName, email = User.Identity.Name, cardLocation = item.CardLocation })
+                    </td>
+                </tr>
+            </tbody>
+        }
 
-</table>
+    </table>
+</div>

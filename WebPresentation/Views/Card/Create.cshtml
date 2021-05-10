@@ -18,7 +18,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.CardID, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.CardID, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.CardID, new { htmlAttributes = new { @class = "form-control", @maxlength = "10" } })
             @Html.ValidationMessageFor(model => model.CardID, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -26,7 +26,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.CardName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.CardName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.CardName, new { htmlAttributes = new { @class = "form-control", @maxlength = "75" } })
             @Html.ValidationMessageFor(model => model.CardName, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -151,13 +151,13 @@
     <div class="form-group">
         @Html.LabelFor(model => model.LevelRank, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.LevelRank, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.LevelRank, new { htmlAttributes = new { @class = "form-control", @maxlength = "2" } })
             @Html.ValidationMessageFor(model => model.LevelRank, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.Attack, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.Attack, htmlAttributes: new { @class = "control-label col-md-2", @maxlength = "5" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Attack, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Attack, "", new { @class = "text-danger" })
@@ -165,7 +165,7 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.Defense, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.Defense, htmlAttributes: new { @class = "control-label col-md-2", @maxlength = "5" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Defense, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Defense, "", new { @class = "text-danger" })
@@ -173,7 +173,7 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.PendulumScale, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.PendulumScale, htmlAttributes: new { @class = "control-label col-md-2", @maxlength = "2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.PendulumScale, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.PendulumScale, "", new { @class = "text-danger" })
@@ -181,7 +181,7 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.LinkNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.LinkNumber, htmlAttributes: new { @class = "control-label col-md-2", @maxlength = "1" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.LinkNumber, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.LinkNumber, "", new { @class = "text-danger" })
@@ -206,7 +206,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.CardText, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.CardText, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.CardText, new { htmlAttributes = new { @class = "form-control", @maxlength = "1000" } })
             @Html.ValidationMessageFor(model => model.CardText, "", new { @class = "text-danger" })
         </div>
     </div>

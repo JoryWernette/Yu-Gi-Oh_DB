@@ -1,4 +1,12 @@
-﻿using DataObjects;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// This class accesses the Player data through
+/// the DBConnection class
+/// </summary>
+
+using DataObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +19,16 @@ namespace DataAccessLayer
 {
     public class PlayerAccessor : IPlayerAccessor
     {
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// a fake method used to deactivate a Player's account.
+        /// </summary>
+        /// 
+        /// <param name="konamiID"> The Konami ID of the Player whose account will be deactivated</param>
+        /// <exception>Performance not reactivated or deactivated</exception>
+        /// <returns>an int signifying the rows affected</returns>
         public int DeactivatePlayer(int konamiID)
         {
             int result = 0;
@@ -41,6 +59,17 @@ namespace DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// a fake method used to deactivate a Player's account.
+        /// </summary>
+        /// 
+        /// <param name="konamiID"> The Konami ID of the Player whose role will be removed</param>
+        /// <param name="role"> The role that will be removed from a Player</param>
+        /// <exception>Performance not reactivated or deactivated</exception>
+        /// <returns>an int signifying the rows affected</returns>
         public int DeletePlayerRole(int konamiID, string role)
         {
             int result = 0;
@@ -73,6 +102,17 @@ namespace DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Creates a new PlayerRole record
+        /// </summary>
+        /// 
+        /// <param name="konamiID"> The Konami ID of the Player whose role will be added</param>
+        /// <param name="role"> The role that will be add to a Player</param>
+        /// <exception>No Collection created</exception>
+        /// <returns>an int signifying the rows affected</returns>
         public int InsertPlayerRole(int konamiID, string role)
         {
             int result = 0;
@@ -105,6 +145,16 @@ namespace DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Creates a new Player record
+        /// </summary>
+        /// 
+        /// <param name="player"> The Player object of the Player to be created</param>
+        /// <exception>No Collection created</exception>
+        /// <returns>an int signifying the rows affected</returns>
         public int InsertNewPlayer(Player player)
         {
             int konamiID = 0;
@@ -143,6 +193,16 @@ namespace DataAccessLayer
             return konamiID;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// a fake method used to reactivate a Player's account.
+        /// </summary>
+        /// 
+        /// <param name="konamiID"> The Konami ID of the Player whose account will be reactivated</param>
+        /// <exception>Performance not reactivated or reactivated</exception>
+        /// <returns>an int signifying the rows affected</returns>
         public int ReactivatePlayer(int konamiID)
         {
             int result = 0;
@@ -168,6 +228,15 @@ namespace DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Selects the Roles Currently in the Database
+        /// </summary>
+        /// 
+        /// <exception>No roles Found</exception>
+        /// <returns>List of roles</returns>
         public List<string> SelectAllRoles()
         {
             List<string> roles = new List<string>();
@@ -210,6 +279,16 @@ namespace DataAccessLayer
             return roles;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Selects all Players' records Currently in the Database as active
+        /// </summary>
+        /// 
+        /// <param name="active"> Status of a Player</param>
+        /// <exception>No Players Found</exception>
+        /// <returns>List of Player objects</returns>
         public List<Player> SelectPlayersByActive(bool active = true)
         {
             List<Player> players = new List<Player>();
@@ -259,6 +338,16 @@ namespace DataAccessLayer
             return players;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Selects the Player's roles Currently in the Database under a certain konamiID
+        /// </summary>
+        /// 
+        /// <param name="konamiID"> The KonamiID of a Player</param>
+        /// <exception>No Collection Found</exception>
+        /// <returns>List of Roles</returns>
         public List<string> SelectRolesByKonamiID(int konamiID)
         {
             List<string> roles = new List<string>();
@@ -307,6 +396,17 @@ namespace DataAccessLayer
             return roles;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// An abstract method for editing a Player.
+        /// </summary>
+        ///
+        ///<param name="newPlayer">The new Player to be recorded</param>
+        ///<param name="oldPlayer">The old Player record to be overwritten</param>
+        ///<exception></exception>
+        /// <returns>an int signifying the rows affected</returns>
         public int UpdatePlayerProfile(Player oldPlayer, Player newPlayer)
         {
             int result = 0;
@@ -351,6 +451,16 @@ namespace DataAccessLayer
             return result;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Selects the Player's records Currently in the Database under a certain id
+        /// </summary>
+        /// 
+        /// <param name="id"> The KonamiID of a Player</param>
+        /// <exception>No Collection Found</exception>
+        /// <returns>a Player objects</returns>
         public Player SelectPlayerByKonamiID(int id)
         {
             Player player = new Player();

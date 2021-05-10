@@ -1,130 +1,105 @@
-﻿@model DataObjects.Card
+﻿@model DataObjects.AddCardToCollectionModel
 
 @{
-    ViewBag.Title = "AddToMyCollection";
+    ViewBag.Title = "Add Card To My Collection";
 }
 
-<h2>AddToMyCollection</h2>
+<h2>Add Card To My Collection</h2>
+@using (Html.BeginForm("AddToCollection", "Collection", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.CardToAdd.CardName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CardToAdd.CardName, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.HiddenFor(model => model.CardToAdd.CardName)
+                @Html.ValidationMessageFor(model => model.CardToAdd.CardName, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-<div>
-    <h4>Card</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CardName)
-        </dt>
+        <div class="form-group" style="visibility: hidden;">
+            <input type="text" value=@Model.CardToAdd.CardName id="hiddenCardToAddName">
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.CardName)
-        </dd>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CardToAdd.CardText, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CardToAdd.CardText, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.CardToAdd.CardText, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CardCategory)
-        </dt>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CardLocation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CardLocation, new { htmlAttributes = new { @class = "form-control", @maxlength = "250" } })
+                @Html.ValidationMessageFor(model => model.CardLocation, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.CardCategory)
-        </dd>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Add To Collection" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CardType)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CardType)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonsterType)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonsterType)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonsterSubType)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonsterSubType)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonsterAttribute)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonsterAttribute)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LevelRank)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LevelRank)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Attack)
-        </dt>
+    @*<div>
+            <h3>@Html.DisplayFor(model => model.CardName)</h3>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.CardName)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Attack)
-        </dd>
+                <div class="form-group">
+                    <dd>
+                        @Html.DisplayFor(model => model.CardName)
+                    </dd>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Defense)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CardText)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Defense)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.CardText)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PendulumScale)
-        </dt>
+                <dt>
+                    Card Location
+                </dt>
+                <div class="form-group">
+                    <dd>
+                        <input type="text" id="cardLocationEntry" placeholder="Where will you put this card?" maxlength="250" style="width: 20em;">
+                    </dd>
+                </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.PendulumScale)
-        </dd>
+                <dt>
+                    Add Card
+                </dt>
+                <div class="form-group">
+                    <dd>
+                        <input type="submit" id="cardLocationEntry" class="btn btn-lg" value="Add To Collection">
+                    </dd>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LinkNumber)
-        </dt>
+            </dl>
+        </div>*@
+}
 
-        <dd>
-            @Html.DisplayFor(model => model.LinkNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BanlistPlacement)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BanlistPlacement)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CardText)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CardText)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Active)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Active)
-        </dd>
-
-    </dl>
-</div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CardID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", "Card")
 </p>

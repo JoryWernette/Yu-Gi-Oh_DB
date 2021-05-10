@@ -1,4 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// This is the Class containing the Card Manager Test methods
+/// </summary>
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using DataObjects;
 using DataAccessLayer;
@@ -7,6 +14,13 @@ using System.Collections.Generic;
 
 namespace LogicLayerTests
 {
+
+    /// <summary>
+    /// Jory A. Wernette
+    /// Created: 2021/05/10
+    /// 
+    /// This is the Class containing the Card Manager Test methods
+    /// </summary>
     [TestClass]
     public class CardManagerTests
     {
@@ -30,12 +44,25 @@ namespace LogicLayerTests
 
         ICardAccessor cardAccessor;
 
+
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is method instantiates my CardAccessorFake for my tests.
+        /// </summary>
         [TestMethod]
         public void TestSetup()
         {
             cardAccessor = new CardAccessorFake();
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing AddNewCard.
+        /// </summary>
         [TestMethod]
         public void TestAddNewCard()
         {
@@ -68,7 +95,12 @@ namespace LogicLayerTests
             Assert.AreEqual(expectedResult, acutalResult);
         }
 
-        //I Get Null Reference Exception anytime I try to use my accessor and I have no idea why
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing SelectAllCards.
+        /// </summary>
         [TestMethod]
         public void TestSelectAllCards()
         {
@@ -85,6 +117,12 @@ namespace LogicLayerTests
             Assert.AreEqual(expectedCount, actualCount);
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing SelectCardByCardName.
+        /// </summary>
         [TestMethod]
         public void TestSelectCardByCardName()
         {
@@ -102,6 +140,12 @@ namespace LogicLayerTests
             Assert.AreEqual(expectedCardText, cardText);
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing SelectCardByBanlistPlacement.
+        /// </summary>
         [TestMethod]
         public void TestSelectCardByBanlistPlacement()
         {
@@ -120,6 +164,12 @@ namespace LogicLayerTests
             Assert.AreEqual(expectedCount, actualCount);
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing UpdateCard.
+        /// </summary>
         [TestMethod]
         public void TestUpdateCard()
         {
@@ -167,6 +217,12 @@ namespace LogicLayerTests
             Assert.IsTrue(inserted == 0);
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// This is the method testing UpdateACardsBanlistPlacement.
+        /// </summary>
         [TestMethod]
         public void TestUpdateACardsBanlistPlacement()
         {

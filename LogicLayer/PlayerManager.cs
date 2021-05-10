@@ -1,4 +1,11 @@
-﻿using DataObjects;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// Implements the Player Manager interface
+/// </summary>
+
+using DataObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +19,12 @@ namespace LogicLayer
     {
         private IPlayerAccessor _playerAccessor;
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Default constructor initializes an accessor
+        /// </summary>
         public PlayerManager()
         {
             _playerAccessor = new PlayerAccessor();
@@ -21,6 +34,16 @@ namespace LogicLayer
             _playerAccessor = playerAccessor;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Creates a new Player record
+        /// </summary>
+        /// 
+        /// <param name="player"> The Player object of the Player to be created</param>
+        /// <exception>No Collection created</exception>
+        /// <returns>an bool signifying success or failure</returns>
         public bool AddNewPlayer(PlayerViewModel newPlayer)
         {
             bool result = false;
@@ -46,6 +69,17 @@ namespace LogicLayer
             return result;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// An abstract method for editing a Player.
+        /// </summary>
+        ///
+        ///<param name="newPlayer">The new Player to be recorded</param>
+        ///<param name="oldPlayer">The old Player record to be overwritten</param>
+        ///<exception></exception>
+        /// <returns>an bool signifying success or failure</returns>
         public bool EditPlayerProfile(PlayerViewModel oldPlayer,
                                         PlayerViewModel newPlayer,
                                         List<string> oldUnassignedRoles,
@@ -96,6 +130,15 @@ namespace LogicLayer
             return result;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Selects the Roles Currently in the Database
+        /// </summary>
+        /// 
+        /// <exception>No roles Found</exception>
+        /// <returns>List of roles</returns>
         public List<string> RetrieveAllRoles()
         {
             List<string> roles = null;
@@ -116,6 +159,16 @@ namespace LogicLayer
             return roles;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Selects all Players' records Currently in the Database as active
+        /// </summary>
+        /// 
+        /// <param name="active"> Status of a Player</param>
+        /// <exception>No Players Found</exception>
+        /// <returns>List of Player objects</returns>
         public List<Player> RetrievePlayersByActive(bool active = true)
         {
             List<Player> players = null;
@@ -132,6 +185,16 @@ namespace LogicLayer
             return players;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Selects the Player's records Currently in the Database under a certain id
+        /// </summary>
+        /// 
+        /// <param name="id"> The KonamiID of a Player</param>
+        /// <exception>No Collection Found</exception>
+        /// <returns>a Player objects</returns>
         public List<string> RetreiveRolesByKonamiID(int konamiID)
         {
             List<string> roles = null;
@@ -153,6 +216,16 @@ namespace LogicLayer
             return roles;
         }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Selects the Player's records Currently in the Database under a certain id
+        /// </summary>
+        /// 
+        /// <param name="id"> The KonamiID of a Player</param>
+        /// <exception>No Collection Found</exception>
+        /// <returns>a Player objects</returns>
         public Player SelectPlayerByKonamiID(int id)
         {
             try

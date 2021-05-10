@@ -1,4 +1,11 @@
-﻿using System;
+﻿/// <summary>
+/// Jory A. Wernette
+/// Created: 2021/05/10
+/// 
+/// Class for the creation of User Objects with set data fields
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +22,12 @@ namespace DataObjects
         public string Email { get; private set; }
         public List<string> Roles { get; private set; }
 
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        /// 
+        /// Constructor for the creation of User Objects with set data fields
+        /// </summary>
         public User(int userID, string firstName, string lastName, 
             string phoneNumber, string email, List<string> roles)
         {
