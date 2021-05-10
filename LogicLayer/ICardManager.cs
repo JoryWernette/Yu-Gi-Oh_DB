@@ -14,7 +14,7 @@ namespace LogicLayer
         bool EditCardBanlistPlacement(string carName, 
             string oldBanlistPlacment, string newBanlistPlacement);
 
-        int UpdateACard(Card card);
+        int UpdateACard(Card newCard, Card oldCard);
 
         List<Card> RetreiveAllCards();
 

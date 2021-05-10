@@ -1,12 +1,47 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+
+    background-color: #b2863d;
+
+    background-image: url('background_images/Blank_Normal_MonsterTextPlate.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: auto;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.content {
+    background-image: url('../images/Blank_Normal_MonsterTextPlate.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: auto;
+}
+
+.jumbotron {
+    background-color: #b25126;
+}
+
+.cardListTable {
+    max-height: 30em;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: #f8e7bb;
+    width: 80vw;
+    height: 80vh;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -16,9 +51,37 @@
     white-space: normal;
 }
 
+.die {
+    margin: .5em;
+    padding: .5em;
+    background-color: #ffffff;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+#toolsDiv {
+    height: 80%;
+}
+
+#coinFlip, #diceRoll, #lpCalculator {
+    width: 30%;
+    height: 100%;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
 }

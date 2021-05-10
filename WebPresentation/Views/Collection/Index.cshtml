@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DataObjects.Collection>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My Collection</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CardName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardLocation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardLocation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CardName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CardName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CardName })
+        </td>
+    </tr>
+}
+
+</table>

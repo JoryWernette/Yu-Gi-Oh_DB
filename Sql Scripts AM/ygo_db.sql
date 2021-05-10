@@ -70,7 +70,8 @@ INSERT INTO [dbo].[Player]
 VALUES
 	(0100506737, 'joryawernette@gmail.com', 'Jory', 'Wernette', '3194716420'),
 	(0100499489, 'michaelwernette@aol.com', 'Michael', 'Wernette', '3195410958'),
-	(0100588987, 'youcantsitwithus3030@icloud.com', 'Chloe', 'Woodall', '3196403502')
+	(0100588987, 'youcantsitwithus3030@icloud.com', 'Chloe', 'Woodall', '3196403502'),
+	(1111111111, 'admin@company.com', 'admin', 'admin', '4108675309')
 GO
 
 
@@ -98,7 +99,6 @@ VALUES
 	('Player', 'Any player who makes decks or looks through cards'),
 	('Judge', 'A player with the authority to insert cards as they are released and to create new player accounts.')
 GO
-
 
 /*********************************************************************
 			CREATING the PlayerRole table
@@ -948,5 +948,55 @@ AS
 	END
 GO
 
+/*********************************************************************
+			CREATING the Collection table
+*********************************************************************/
+print '' print '*** creating the Collection table ***'
+GO
+CREATE TABLE [dbo].[Collection](
+	[CollectionID]	[int] NOT NULL IDENTITY,
+	[Email]			[nvarchar](100) NOT NULL,
+	[CardName]		[nvarchar](75)	NOT NULL, 
+	[CardLocation]	[nvarchar](250) NULL,
+	CONSTRAINT [pk_CollectionID] PRIMARY KEY ([CollectionID])
+)
+GO
+/*********************************************************************
+			INSERTING into the Collection table
+*********************************************************************/
+print '' print '*** creating Collection data ***'
+GO
+INSERT INTO [dbo].[Collection]
+	([Email], [CardName], [CardLocation])
+VALUES
+	('joryawernette@gmail.com', 'Blue-Eyes White Dragon', 'Blue-Eyes Deck'),
+	('joryawernette@gmail.com', 'Flame Swordsman', 'Fusion Binder'),
+	('michaelwernette@aol.com', 'Blue-Eyes White Dragon', 'Blue-Eyes Deck'),
+	('youcantsitwithus3030@icloud.com', 'Blue-Eyes White Dragon', 'Blue-Eyes Deck'),
+	('admin@company.com', 'Blue-Eyes White Dragon', 'Blue-Eyes Deck'),
+	('admin@company.com', 'Blue-Eyes White Dragon', 'Blue-Eyes Deck'),
+	('admin@company.com', 'Blue-Eyes White Dragon', 'Blue-Eyes Deck'),
+	('admin@company.com', 'Flame Swordsman', 'Fusion Binder'),
+	('admin@company.com', 'Pot of Greed', 'Collector Binder'),
+	('admin@company.com', 'Raigeki', 'Collector Binder'),
+	('admin@company.com', 'Raigeki', 'Blue-Eyes Deck'),
+	('admin@company.com', 'Hitotsu-Me Giant', 'Collector Binder')
+GO
 
-
+/*********************************************************************
+			CREATING sp_select_my_collection_by_email
+*********************************************************************/
+print '' print '*** creating sp_select_my_collection_by_email ***'
+GO
+CREATE PROCEDURE [dbo].[sp_select_my_collection_by_email]
+	(
+		@Email	[nvarchar](100)
+	)
+AS
+	BEGIN
+		SELECT 	CollectionID, Email, CardName, CardLocation
+		FROM 	Collection
+		WHERE Email = @Email
+		ORDER BY CardName ASC
+	END
+GO

@@ -1,0 +1,130 @@
+﻿@model DataObjects.Card
+
+@{
+    ViewBag.Title = "AddToMyCollection";
+}
+
+<h2>AddToMyCollection</h2>
+
+<div>
+    <h4>Card</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CardName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonsterType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonsterType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonsterSubType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonsterSubType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonsterAttribute)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonsterAttribute)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LevelRank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LevelRank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attack)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attack)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Defense)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Defense)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PendulumScale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PendulumScale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinkNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinkNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BanlistPlacement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BanlistPlacement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CardID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

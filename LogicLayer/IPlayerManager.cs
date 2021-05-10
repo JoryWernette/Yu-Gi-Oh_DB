@@ -9,7 +9,8 @@ namespace LogicLayer
 {
     public interface IPlayerManager
     {
-        List<PlayerViewModel> RetrievePlayersByActive(bool active = true);
+        List<Player> RetrievePlayersByActive(bool active = true);
+        Player SelectPlayerByKonamiID(int id);
         List<string> RetreiveRolesByKonamiID(int konamiID);
         List<string> RetrieveAllRoles();
         bool EditPlayerProfile(PlayerViewModel oldPlayer, 

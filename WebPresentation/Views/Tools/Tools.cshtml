@@ -1,0 +1,237 @@
+﻿
+@{
+    ViewBag.Title = "Tools";
+}
+
+<script>
+    $(document).ready(function () {
+        resetCoinflip();
+        resetDice();
+        resetLPCalculator();
+    });
+    var heads = 0;
+    var tails = 0;
+    function coinFlip() {
+        document.getElementById("Heads").style.visibility = "hidden";
+        document.getElementById("Tails").style.visibility = "hidden";
+        document.getElementById("resultLabel").innerText = "Flipping coin...";
+        doCoinFlip();
+    }
+
+    function resetCoinflip() {
+        heads = 0;
+        document.getElementById("HeadsCounter").innerText = 0;
+        tails = 0;
+        document.getElementById("TailsCounter").innerText = 0;
+        document.getElementById("resultLabel").innerText = "Click the Coin to Flip";
+
+        
+    }
+
+    function doCoinFlip() {
+        var x = Math.floor(Math.random() * 2); // returns 1 or 0 at random
+        if (x > 0) {
+            setCoinImage("Heads");
+        } else {
+            setCoinImage("Tails");
+        }
+
+    }
+
+    function setCoinImage(coin) {
+        if (coin == "Heads") {
+            heads++;
+            document.getElementById("Heads").style.visibility = "visible";
+            document.getElementById("Tails").style.visibility = "hidden";
+            document.getElementById("resultLabel").innerText = "It's Heads!";
+            document.getElementById("HeadsCounter").innerText = heads;
+        } else {
+            tails++;
+            document.getElementById("Heads").style.visibility = "hidden";
+            document.getElementById("Tails").style.visibility = "visible";
+            document.getElementById("resultLabel").innerText = "It's Tails!";
+            document.getElementById("TailsCounter").innerText = tails;
+        }
+    }
+
+    function resetDice() {
+        document.getElementById("die6").style.backgroundColor = "#ffffff";
+        document.getElementById("die5").style.backgroundColor = "#ffffff";
+        document.getElementById("die4").style.backgroundColor = "#ffffff";
+        document.getElementById("die3").style.backgroundColor = "#ffffff";
+        document.getElementById("die2").style.backgroundColor = "#ffffff";
+        document.getElementById("die1").style.backgroundColor = "#ffffff";
+    }
+
+    function rollDie() {
+        resetDice();
+        var dieResult = 0
+        dieResult = 1 + Math.floor(Math.random() * 6)
+        if (dieResult == 6) {
+            document.getElementById("die6").style.backgroundColor = "#00539b";
+            document.getElementById("dieResultLabel").innerText = "You rolled: 6";
+        } else if (dieResult == 5) {
+            document.getElementById("die5").style.backgroundColor = "#00539b";
+            document.getElementById("dieResultLabel").innerText = "You rolled: 5";
+        } else if (dieResult == 4) {
+            document.getElementById("die4").style.backgroundColor = "#00539b";
+            document.getElementById("dieResultLabel").innerText = "You rolled: 4";
+        } else if (dieResult == 3) {
+            document.getElementById("die3").style.backgroundColor = "#00539b";
+            document.getElementById("dieResultLabel").innerText = "You rolled: 3";
+        } else if (dieResult == 2) {
+            document.getElementById("die2").style.backgroundColor = "#00539b";
+            document.getElementById("dieResultLabel").innerText = "You rolled: 2";
+        } else if (dieResult == 1) {
+            document.getElementById("die1").style.backgroundColor = "#00539b";
+            document.getElementById("dieResultLabel").innerText = "You rolled: 1";
+        }
+    }
+
+    function resetLPCalculator() {
+        resetLPWarnings();
+        document.getElementById("p1LP").innerText = "8000";
+        document.getElementById("p2LP").innerText = "8000";
+
+        document.getElementById("changeToLPAnnouncement").innerText = "LP reset";
+
+        document.getElementById("addLP_P1").checked = false;
+        document.getElementById("minusLP_P1").checked = false;
+        document.getElementById("addLP_P2").checked = false;
+        document.getElementById("minusLP_P2").checked = false;
+
+        document.getElementById("changePlayer1LP").value = "";
+        document.getElementById("changePlayer2LP").value = ""
+
+    }
+
+    function resetLPWarnings() {
+        document.getElementById("p1Warning").innerText = "";
+        document.getElementById("p2Warning").innerText = "";
+    }
+
+    function changePlayer1LP() {
+        resetLPWarnings();
+        var operation = $('input[name="Player1LP"]:checked').val();
+        var amount = parseInt(document.getElementById("changePlayer1LP").value);
+        var currentLP = parseInt(document.getElementById("p1LP").innerText);
+        if (amount > 0) {
+            if (operation == "+") {
+                currentLP = currentLP + amount;
+                document.getElementById("p1LP").innerText = currentLP;
+                document.getElementById("changeToLPAnnouncement").innerText = "Player 1 gained " + amount + "LP";
+            } else if (operation == "-") {
+                currentLP = currentLP - amount;
+                document.getElementById("p1LP").innerText = currentLP;
+                if (parseInt(document.getElementById("p1LP").innerText) < 0) {
+                    document.getElementById("changeToLPAnnouncement").innerText = "Player 1 lost " + amount + "LP and has lost the duel";
+                }
+                document.getElementById("changeToLPAnnouncement").innerText = "Player 1 lost " + amount + "LP";
+            } else {
+                document.getElementById("p1Warning").innerText = "You need to pick + or -";
+            }
+        } else {
+            document.getElementById("p1Warning").innerText = "You need to enter a positive integer";
+        }
+    }
+
+    function changePlayer2LP() {
+        resetLPWarnings();
+        var operation = $('input[name="Player2LP"]:checked').val();
+        var amount = parseInt(document.getElementById("changePlayer2LP").value);
+        var currentLP = parseInt(document.getElementById("p2LP").innerText);
+        if (amount > 0) {
+            if (operation == "+") {
+                currentLP = currentLP + amount;
+                document.getElementById("p2LP").innerText = currentLP;
+                document.getElementById("changeToLPAnnouncement").innerText = "Player 2 gained " + amount + "LP";
+            } else if (operation == "-") {
+                currentLP = currentLP - amount;
+                document.getElementById("p2LP").innerText = currentLP;
+                if (parseInt(currentLP) < 0) {
+                    document.getElementById("changeToLPAnnouncement").innerText = "Player 2 lost " + amount + "LP and has lost the duel";
+                }
+                document.getElementById("changeToLPAnnouncement").innerText = "Player 2 lost " + amount + "LP";
+            } else {
+                document.getElementById("p2Warning").innerText = "You need to pick + or -";
+            }
+        } else {
+            document.getElementById("p2Warning").innerText = "You need to enter a positive integer";
+        }
+    }
+    
+</script>
+<h2>Tools</h2>
+<div class="content" id="toolsDiv">
+
+    <div class="col-lg-3 content" id="coinFlip">
+        <br />
+        <h2>Flip A Coin</h2>
+        <br />
+        <p>Click to flip!</p>
+        <br /><br />
+
+        <input type="image" src="~/images/heads.png" width="100" height="100" alt="CoinHeads" value="Heads" id="Heads" onclick="coinFlip()" style="visibility: visible" />
+        <input type="image" src="~/images/tails.png" width="100" height="100" alt="CoinHeads" value="Heads" id="Tails" onclick="coinFlip()" style="visibility: hidden" />
+        <br />
+        <h3 id="resultLabel"></h3>
+        <div id="HeadsCount" style="width: 45%; float: left;">
+            <h4>Heads</h4><br />
+            <p id="HeadsCounter"></p>
+        </div>
+        <div id="TailsCount" style="width: 45%; float: right;">
+            <h4>Tails</h4><br />
+            <p id="TailsCounter"></p>
+        </div>
+        <br />
+        <input class="btn btn-lg" type="button" id="resetCoinFlip" value="Reset" onclick="resetCoinflip()">
+    </div>
+
+    <div class="col-lg-4 content" id="lpCalculator">
+        <br />
+        <h2>LP Calculator</h2>
+        <div id="Player1LP">
+            <h3>Player 1 LP: </h3><h3 id="p1LP">8000</h3>
+            <input type="radio" value="+" id="addLP_P1" name="Player1LP" />
+            <label for="+" style="font-weight: bold;">+</label>
+            <input type="radio" value="-" id="minusLP_P1" name="Player1LP" />
+            <label for="-" style="font-weight: bold;">-</label>
+            <input type="number" id="changePlayer1LP">
+            <input type="button" id="btnPlayer1" value="Go" onclick="changePlayer1LP()">
+            <br />
+            <span id="p1Warning" style="color: red"></span>
+        </div>
+
+        <div id="Player2LP">
+            <h3>Player 2 LP: </h3><h3 id="p2LP">8000</h3>
+            <input type="radio" value="+" id="addLP_P2" name="Player2LP" />
+            <label for="+" style="font-weight: bold;">+</label>
+            <input type="radio" value="-" id="minusLP_P2" name="Player2LP" />
+            <label for="-" style="font-weight: bold;">-</label>
+            <input type="number" id="changePlayer2LP">
+            <input type="button" id="btnPlayer2" value="Go" onclick="changePlayer2LP()">
+            <br />
+            <span id="p2Warning" style="color: red"></span>
+        </div>
+        <h3 id="changeToLPAnnouncement"></h3>
+        <input type="button" value="Reset" onclick="resetLPCalculator()">
+    </div>
+
+    <div class="col-lg-2 content" id="diceRoll">
+        <br />
+        <h2>Die Roll <input type="button" class="btn btn-lg" id="rollButton" value="Roll a Die" onclick="rollDie()"></h2>
+        
+                    <div>
+                        <img class="die" src="~/images/dieResult_1.png" id="die1" width="100" height="100" />
+                        <img class="die" src="~/images/dieResult_2.png" id="die2" width="100" height="100" />
+                        <br />
+                        <img class="die" src="~/images/dieResult_3.png" id="die3" width="100" height="100" />
+                        <img class="die" src="~/images/dieResult_4.png" id="die4" width="100" height="100" />
+                        <br />
+                        <img class="die" src="~/images/dieResult_5.png" id="die5" width="100" height="100" />
+                        <img class="die" src="~/images/dieResult_6.png" id="die6" width="100" height="100" />
+                    </div>
+        <h3 id="dieResultLabel"></h3>
+    </div>
+</div>
+

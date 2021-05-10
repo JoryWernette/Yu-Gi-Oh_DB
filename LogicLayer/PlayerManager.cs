@@ -116,9 +116,9 @@ namespace LogicLayer
             return roles;
         }
 
-        public List<PlayerViewModel> RetrievePlayersByActive(bool active = true)
+        public List<Player> RetrievePlayersByActive(bool active = true)
         {
-            List<PlayerViewModel> players = null;
+            List<Player> players = null;
 
             try
             {
@@ -151,6 +151,18 @@ namespace LogicLayer
             }
 
             return roles;
+        }
+
+        public Player SelectPlayerByKonamiID(int id)
+        {
+            try
+            {
+                return _playerAccessor.SelectPlayerByKonamiID(id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Data unavailable.", ex);
+            }
         }
     }
 }

@@ -21,64 +21,34 @@ namespace DataAccessLayer
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@CardID", SqlDbType.NVarChar, 10);
-            cmd.Parameters.Add("@NewCardName", SqlDbType.NVarChar, 75);
-            cmd.Parameters.Add("@NewCardCategory", SqlDbType.NVarChar, 7);
-            cmd.Parameters.Add("@NewCardType", SqlDbType.NVarChar, 12);
-            cmd.Parameters.Add("@NewMonsterType", SqlDbType.NVarChar, 13);
-            cmd.Parameters.Add("@NewMonsterSubType", SqlDbType.NVarChar, 8);
-            cmd.Parameters.Add("@NewMonsterAttribute", SqlDbType.NVarChar, 6);
-            cmd.Parameters.Add("@NewLevelRank", SqlDbType.Int);
-            cmd.Parameters.Add("@NewAttack", SqlDbType.Int);
-            cmd.Parameters.Add("@NewDefense", SqlDbType.Int);
-            cmd.Parameters.Add("@NewPendulumScale", SqlDbType.Int);
-            cmd.Parameters.Add("@NewLinkNumber", SqlDbType.Int);
-            cmd.Parameters.Add("@NewBanlistPlacement", SqlDbType.NVarChar, 12);
-            cmd.Parameters.Add("@NewCardText", SqlDbType.NVarChar, 1000);
+            cmd.Parameters.Add("@CardName", SqlDbType.NVarChar, 75);
+            cmd.Parameters.Add("@CardCategory", SqlDbType.NVarChar, 7);
+            cmd.Parameters.Add("@CardType", SqlDbType.NVarChar, 12);
+            cmd.Parameters.Add("@MonsterType", SqlDbType.NVarChar, 13);
+            cmd.Parameters.Add("@MonsterSubType", SqlDbType.NVarChar, 8);
+            cmd.Parameters.Add("@MonsterAttribute", SqlDbType.NVarChar, 6);
+            cmd.Parameters.Add("@LevelRank", SqlDbType.Int);
+            cmd.Parameters.Add("@Attack", SqlDbType.Int);
+            cmd.Parameters.Add("@Defense", SqlDbType.Int);
+            cmd.Parameters.Add("@PendulumScale", SqlDbType.Int);
+            cmd.Parameters.Add("@LinkNumber", SqlDbType.Int);
+            cmd.Parameters.Add("@BanlistPlacement", SqlDbType.NVarChar, 12);
+            cmd.Parameters.Add("@CardText", SqlDbType.NVarChar, 1000);
 
             cmd.Parameters["@CardID"].Value = card.CardID;
-            cmd.Parameters["@NewCardName"].Value = card.CardName;
-            cmd.Parameters["@NewCardCategory"].Value = card.CardCategory;
-            cmd.Parameters["@NewCardType"].Value = card.CardType;
-            cmd.Parameters["@NewMonsterType"].Value = card.MonsterType;
-            cmd.Parameters["@NewMonsterSubType"].Value = card.MonsterSubType;
-            cmd.Parameters["@NewMonsterAttribute"].Value = card.MonsterAttribute;
-            cmd.Parameters["@NewLevelRank"].Value = card.LevelRank;
-            cmd.Parameters["@NewAttack"].Value = card.Attack;
-            cmd.Parameters["@NewDefense"].Value = card.Defense;
-            cmd.Parameters["@NewPendulumScale"].Value = card.PendulumScale;
-            cmd.Parameters["@NewLinkNumber"].Value = card.LinkNumber;
-            cmd.Parameters["@NewBanlistPlacement"].Value = card.BanlistPlacement;
-            cmd.Parameters["@NewCardText"].Value = card.CardText;
-
-
-
-            cmd.Parameters.Add("@OldCardName", SqlDbType.NVarChar, 75);
-            cmd.Parameters.Add("@OldCardCategory", SqlDbType.NVarChar, 7);
-            cmd.Parameters.Add("@OldCardType", SqlDbType.NVarChar, 12);
-            cmd.Parameters.Add("@OldMonsterType", SqlDbType.NVarChar, 13);
-            cmd.Parameters.Add("@OldMonsterSubType", SqlDbType.NVarChar, 8);
-            cmd.Parameters.Add("@OldMonsterAttribute", SqlDbType.NVarChar, 6);
-            cmd.Parameters.Add("@OldLevelRank", SqlDbType.Int);
-            cmd.Parameters.Add("@OldAttack", SqlDbType.Int);
-            cmd.Parameters.Add("@OldDefense", SqlDbType.Int);
-            cmd.Parameters.Add("@OldPendulumScale", SqlDbType.Int);
-            cmd.Parameters.Add("@OldLinkNumber", SqlDbType.Int);
-            cmd.Parameters.Add("@OldBanlistPlacement", SqlDbType.NVarChar, 12);
-            cmd.Parameters.Add("@OldCardText", SqlDbType.NVarChar, 1000);
-
-            cmd.Parameters["@OldCardName"].Value = card.CardName;
-            cmd.Parameters["@OldCardCategory"].Value = card.CardCategory;
-            cmd.Parameters["@OldCardType"].Value = card.CardType;
-            cmd.Parameters["@OldMonsterType"].Value = card.MonsterType;
-            cmd.Parameters["@OldMonsterSubType"].Value = card.MonsterSubType;
-            cmd.Parameters["@OldMonsterAttribute"].Value = card.MonsterAttribute;
-            cmd.Parameters["@OldLevelRank"].Value = card.LevelRank;
-            cmd.Parameters["@OldAttack"].Value = card.Attack;
-            cmd.Parameters["@OldDefense"].Value = card.Defense;
-            cmd.Parameters["@OldPendulumScale"].Value = card.PendulumScale;
-            cmd.Parameters["@OldLinkNumber"].Value = card.LinkNumber;
-            cmd.Parameters["@OldBanlistPlacement"].Value = card.BanlistPlacement;
-            cmd.Parameters["@OldCardText"].Value = card.CardText;
+            cmd.Parameters["@CardName"].Value = card.CardName;
+            cmd.Parameters["@CardCategory"].Value = card.CardCategory;
+            cmd.Parameters["@CardType"].Value = card.CardType;
+            cmd.Parameters["@MonsterType"].Value = card.MonsterType;
+            cmd.Parameters["@MonsterSubType"].Value = card.MonsterSubType;
+            cmd.Parameters["@MonsterAttribute"].Value = card.MonsterAttribute;
+            cmd.Parameters["@LevelRank"].Value = card.LevelRank;
+            cmd.Parameters["@Attack"].Value = card.Attack;
+            cmd.Parameters["@Defense"].Value = card.Defense;
+            cmd.Parameters["@PendulumScale"].Value = card.PendulumScale;
+            cmd.Parameters["@LinkNumber"].Value = card.LinkNumber;
+            cmd.Parameters["@BanlistPlacement"].Value = card.BanlistPlacement;
+            cmd.Parameters["@CardText"].Value = card.CardText;
 
             try
             {
@@ -250,7 +220,7 @@ namespace DataAccessLayer
             return cards;
         }
 
-        public int UpdateACard(Card card)
+        public int UpdateACard(Card newCard, Card oldCard)
         {
             int rowsAffected;
 
@@ -259,34 +229,63 @@ namespace DataAccessLayer
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@CardID", SqlDbType.NVarChar, 10);
-            cmd.Parameters.Add("@CardName", SqlDbType.NVarChar, 75);
-            cmd.Parameters.Add("@CardCategory", SqlDbType.NVarChar, 7);
-            cmd.Parameters.Add("@CardType", SqlDbType.NVarChar, 12);
-            cmd.Parameters.Add("@MonsterType", SqlDbType.NVarChar, 13);
-            cmd.Parameters.Add("@MonsterSubType", SqlDbType.NVarChar, 8);
-            cmd.Parameters.Add("@MonsterAttribute", SqlDbType.NVarChar, 6);
-            cmd.Parameters.Add("@LevelRank", SqlDbType.Int);
-            cmd.Parameters.Add("@Attack", SqlDbType.Int);
-            cmd.Parameters.Add("@Defense", SqlDbType.Int);
-            cmd.Parameters.Add("@PendulumScale", SqlDbType.Int);
-            cmd.Parameters.Add("@LinkNumber", SqlDbType.Int);
-            cmd.Parameters.Add("@BanlistPlacement", SqlDbType.NVarChar, 12);
-            cmd.Parameters.Add("@CardText", SqlDbType.NVarChar, 1000);
+            cmd.Parameters.Add("@NewCardName", SqlDbType.NVarChar, 75);
+            cmd.Parameters.Add("@NewCardCategory", SqlDbType.NVarChar, 7);
+            cmd.Parameters.Add("@NewCardType", SqlDbType.NVarChar, 12);
+            cmd.Parameters.Add("@NewMonsterType", SqlDbType.NVarChar, 13);
+            cmd.Parameters.Add("@NewMonsterSubType", SqlDbType.NVarChar, 8);
+            cmd.Parameters.Add("@NewMonsterAttribute", SqlDbType.NVarChar, 6);
+            cmd.Parameters.Add("@NewLevelRank", SqlDbType.Int);
+            cmd.Parameters.Add("@NewAttack", SqlDbType.Int);
+            cmd.Parameters.Add("@NewDefense", SqlDbType.Int);
+            cmd.Parameters.Add("@NewPendulumScale", SqlDbType.Int);
+            cmd.Parameters.Add("@NewLinkNumber", SqlDbType.Int);
+            cmd.Parameters.Add("@NewBanlistPlacement", SqlDbType.NVarChar, 12);
+            cmd.Parameters.Add("@NewCardText", SqlDbType.NVarChar, 1000);
 
-            cmd.Parameters["@CardID"].Value = card.CardID;
-            cmd.Parameters["@CardName"].Value = card.CardName;
-            cmd.Parameters["@CardCategory"].Value = card.CardCategory;
-            cmd.Parameters["@CardType"].Value = card.CardType;
-            cmd.Parameters["@MonsterType"].Value = card.MonsterType;
-            cmd.Parameters["@MonsterSubType"].Value = card.MonsterSubType;
-            cmd.Parameters["@MonsterAttribute"].Value = card.MonsterAttribute;
-            cmd.Parameters["@LevelRank"].Value = card.LevelRank;
-            cmd.Parameters["@Attack"].Value = card.Attack;
-            cmd.Parameters["@Defense"].Value = card.Defense;
-            cmd.Parameters["@PendulumScale"].Value = card.PendulumScale;
-            cmd.Parameters["@LinkNumber"].Value = card.LinkNumber;
-            cmd.Parameters["@BanlistPlacement"].Value = card.BanlistPlacement;
-            cmd.Parameters["@CardText"].Value = card.CardText;
+            cmd.Parameters["@CardID"].Value = newCard.CardID;
+            cmd.Parameters["@NewCardName"].Value = newCard.CardName;
+            cmd.Parameters["@NewCardCategory"].Value = newCard.CardCategory;
+            cmd.Parameters["@NewCardType"].Value = newCard.CardType;
+            cmd.Parameters["@NewMonsterType"].Value = newCard.MonsterType;
+            cmd.Parameters["@NewMonsterSubType"].Value = newCard.MonsterSubType;
+            cmd.Parameters["@NewMonsterAttribute"].Value = newCard.MonsterAttribute;
+            cmd.Parameters["@NewLevelRank"].Value = newCard.LevelRank;
+            cmd.Parameters["@NewAttack"].Value = newCard.Attack;
+            cmd.Parameters["@NewDefense"].Value = newCard.Defense;
+            cmd.Parameters["@NewPendulumScale"].Value = newCard.PendulumScale;
+            cmd.Parameters["@NewLinkNumber"].Value = newCard.LinkNumber;
+            cmd.Parameters["@NewBanlistPlacement"].Value = newCard.BanlistPlacement;
+            cmd.Parameters["@NewCardText"].Value = newCard.CardText;
+
+
+            cmd.Parameters.Add("@OldCardName", SqlDbType.NVarChar, 75);
+            cmd.Parameters.Add("@OldCardCategory", SqlDbType.NVarChar, 7);
+            cmd.Parameters.Add("@OldCardType", SqlDbType.NVarChar, 12);
+            cmd.Parameters.Add("@OldMonsterType", SqlDbType.NVarChar, 13);
+            cmd.Parameters.Add("@OldMonsterSubType", SqlDbType.NVarChar, 8);
+            cmd.Parameters.Add("@OldMonsterAttribute", SqlDbType.NVarChar, 6);
+            cmd.Parameters.Add("@OldLevelRank", SqlDbType.Int);
+            cmd.Parameters.Add("@OldAttack", SqlDbType.Int);
+            cmd.Parameters.Add("@OldDefense", SqlDbType.Int);
+            cmd.Parameters.Add("@OldPendulumScale", SqlDbType.Int);
+            cmd.Parameters.Add("@OldLinkNumber", SqlDbType.Int);
+            cmd.Parameters.Add("@OldBanlistPlacement", SqlDbType.NVarChar, 12);
+            cmd.Parameters.Add("@OldCardText", SqlDbType.NVarChar, 1000);
+
+            cmd.Parameters["@OldCardName"].Value = oldCard.CardName;
+            cmd.Parameters["@OldCardCategory"].Value = oldCard.CardCategory;
+            cmd.Parameters["@OldCardType"].Value = oldCard.CardType;
+            cmd.Parameters["@OldMonsterType"].Value = oldCard.MonsterType;
+            cmd.Parameters["@OldMonsterSubType"].Value = oldCard.MonsterSubType;
+            cmd.Parameters["@OldMonsterAttribute"].Value = oldCard.MonsterAttribute;
+            cmd.Parameters["@OldLevelRank"].Value = oldCard.LevelRank;
+            cmd.Parameters["@OldAttack"].Value = oldCard.Attack;
+            cmd.Parameters["@OldDefense"].Value = oldCard.Defense;
+            cmd.Parameters["@OldPendulumScale"].Value = oldCard.PendulumScale;
+            cmd.Parameters["@OldLinkNumber"].Value = oldCard.LinkNumber;
+            cmd.Parameters["@OldBanlistPlacement"].Value = oldCard.BanlistPlacement;
+            cmd.Parameters["@OldCardText"].Value = oldCard.CardText;
 
             try
             {

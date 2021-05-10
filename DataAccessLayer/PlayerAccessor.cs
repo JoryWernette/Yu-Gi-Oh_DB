@@ -210,9 +210,9 @@ namespace DataAccessLayer
             return roles;
         }
 
-        public List<PlayerViewModel> SelectPlayersByActive(bool active = true)
+        public List<Player> SelectPlayersByActive(bool active = true)
         {
-            List<PlayerViewModel> players = new List<PlayerViewModel>();
+            List<Player> players = new List<Player>();
 
             // connection
             var conn = DBConnection.GetDBConnection();
@@ -233,7 +233,7 @@ namespace DataAccessLayer
                 {
                     while (reader.Read())
                     {
-                        var player = new PlayerViewModel()
+                        var player = new Player()
                         {
                             KonamiID = reader.GetInt32(0),
                             Email = reader.GetString(1),
@@ -241,7 +241,7 @@ namespace DataAccessLayer
                             LastName = reader.GetString(3),
                             PhoneNumber = reader.GetString(4),
                             Active = reader.GetBoolean(5),
-                            Roles = null // lazy instantiation - wait until needed
+                            //Roles = null // lazy instantiation - wait until needed
                         };
                         players.Add(player);
                     }
@@ -349,6 +349,47 @@ namespace DataAccessLayer
                 conn.Close();
             }
             return result;
+        }
+
+        public Player SelectPlayerByKonamiID(int id)
+        {
+            Player player = new Player();
+
+            var conn = DBConnection.GetDBConnection();
+            var cmd = new SqlCommand("sp_select_players_by_id", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@KonamiID", SqlDbType.Int);
+            cmd.Parameters["@KonamiID"].Value = id;
+
+            try
+            {
+                conn.Open();
+                var reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        player.KonamiID = reader.GetInt32(0);
+                        player.Email = reader.GetString(1);
+                        player.FirstName = reader.GetString(2);
+                        player.LastName = reader.GetString(3);
+                        player.PhoneNumber = reader.GetString(4);
+                        player.Active = reader.GetBoolean(5);
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return player;
         }
     }
 

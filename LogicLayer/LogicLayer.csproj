@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardManager.cs" />
+    <Compile Include="CollectionManager.cs" />
+    <Compile Include="ICollectionManager.cs" />
     <Compile Include="PlayerManager.cs" />
     <Compile Include="ICardManager.cs" />
     <Compile Include="IPlayerManager.cs" />
@@ -61,6 +63,10 @@
     <Compile Include="UserManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccessFakes\DataAccessFakes.csproj">
+      <Project>{81a151ed-85b9-4386-adb1-649a58419d7f}</Project>
+      <Name>DataAccessFakes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
       <Project>{85c7ef4b-f7ed-4f7a-9239-6eede773b3f8}</Project>
       <Name>DataAccessLayer</Name>

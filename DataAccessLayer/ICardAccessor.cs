@@ -13,7 +13,7 @@ namespace DataAccessLayer
         int UpdateACardsBanlistPlacement(string cardName,
             string oldBanlistPlacement, string newBanlistPlacement);
 
-        int UpdateACard(Card card);
+        int UpdateACard(Card newCard, Card oldCard);
 
         List<Card> SelectAllCards();
 

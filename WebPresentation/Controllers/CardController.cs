@@ -56,13 +56,12 @@ namespace WebPresentation.Controllers
             {
                 cardManager.AddNewCard(card);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
                 return View("Create");
             }
 
-            return View("Create");
+            return RedirectToAction("Index");
         }
 
         public ActionResult Edit(string cardName)
@@ -86,40 +85,43 @@ namespace WebPresentation.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Card card, FormCollection form)
+        public ActionResult Edit(Card newCard, FormCollection form)
         {
-            string cardID = card.CardID;
-            string cardName = card.CardName;
+            Card oldCard = new Card();
+            oldCard = cardManager.SelectCardByCardName(newCard.CardName);
+
+            string cardID = newCard.CardID;
+            string cardName = newCard.CardName;
             string cardCategory = form["Card Category"].ToString();
-            card.CardCategory = cardCategory;
+            newCard.CardCategory = cardCategory;
             string cardType = form["Card Type"].ToString();
-            card.CardType = cardType;
+            newCard.CardType = cardType;
             string monsterType = form["Monster Type"].ToString();
-            card.MonsterType = monsterType;
+            newCard.MonsterType = monsterType;
             string monsterSubType = form["Monster Sub-Type"].ToString();
-            card.MonsterSubType = monsterSubType;
+            newCard.MonsterSubType = monsterSubType;
             string monsterAttribute = form["Monster Attribute"].ToString();
-            card.MonsterAttribute = monsterAttribute;
-            int levelRank = card.LevelRank;
-            int atk = card.Attack;
-            int def = card.Defense;
-            int penScale = card.PendulumScale;
-            int linkNumber = card.LinkNumber;
+            newCard.MonsterAttribute = monsterAttribute;
+            int levelRank = newCard.LevelRank;
+            int atk = newCard.Attack;
+            int def = newCard.Defense;
+            int penScale = newCard.PendulumScale;
+            int linkNumber = newCard.LinkNumber;
             string banlistPlacement = form["Banlist Placement"].ToString();
-            card.BanlistPlacement = banlistPlacement;
-            string cardText = card.CardText;
+            newCard.BanlistPlacement = banlistPlacement;
+            string cardText = newCard.CardText;
 
             try
             {
-                cardManager.UpdateACard(card);
+                cardManager.UpdateACard(newCard, oldCard);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 return View("Edit");
             }
 
-            return View("Index");
+            return RedirectToAction("Index");
         }
     }
 }

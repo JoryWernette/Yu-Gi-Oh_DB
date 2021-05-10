@@ -88,11 +88,11 @@ namespace LogicLayer
             }
         }
 
-        public int UpdateACard(Card card)
+        public int UpdateACard(Card newCard, Card oldCard)
         {
             try
             {
-                return (_cardAccessor.UpdateACard(card));
+                return (_cardAccessor.UpdateACard(newCard, oldCard));
             }
             catch (Exception ex)
             {

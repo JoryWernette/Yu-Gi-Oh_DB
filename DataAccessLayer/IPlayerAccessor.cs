@@ -9,7 +9,8 @@ namespace DataAccessLayer
 {
     public interface IPlayerAccessor
     {
-        List<PlayerViewModel> SelectPlayersByActive(bool active = true);
+        List<Player> SelectPlayersByActive(bool active = true);
+        Player SelectPlayerByKonamiID(int id);
         List<string> SelectRolesByKonamiID(int konamiID);
         List<string> SelectAllRoles();
         int UpdatePlayerProfile(Player oldPlayer, Player newPlayer);

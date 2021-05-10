@@ -1,0 +1,13 @@
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\bin\Debug\DataAccessFakes.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\bin\Debug\DataAccessFakes.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\bin\Debug\DataAccessLayer.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\bin\Debug\DataObjects.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\bin\Debug\DataAccessLayer.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\bin\Debug\DataAccessLayer.dll.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\bin\Debug\DataObjects.pdb
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\bin\Debug\DataObjects.dll.config
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\obj\Debug\DataAccessFakes.csprojAssemblyReference.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\obj\Debug\DataAccessFakes.csproj.CoreCompileInputs.cache
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\obj\Debug\DataAccessFakes.csproj.CopyComplete
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\obj\Debug\DataAccessFakes.dll
+C:\Users\jorya\OneDrive\Desktop\Kirkwood\NET DEV 2\Yu-Gi-Oh_DB\DataAccessFakes\obj\Debug\DataAccessFakes.pdb

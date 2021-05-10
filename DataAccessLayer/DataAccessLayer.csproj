@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardAccessor.cs" />
+    <Compile Include="CollectionAccessor.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="ICollectionAccessor.cs" />
     <Compile Include="PlayerAccessor.cs" />
     <Compile Include="ICardAccessor.cs" />
     <Compile Include="IPlayerAccessor.cs" />
