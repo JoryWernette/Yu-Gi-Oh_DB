@@ -65,6 +65,9 @@
        c.Add().Filterable(false).Sortable(false).Encoded(false).Sanitized(false).SetWidth(10).RenderValueAs
             (o => Html.ActionLink("Edit", "Edit", new
             { cardName = o.CardName}));
+       c.Add().Filterable(false).Sortable(false).Encoded(false).Sanitized(false).SetWidth(10).RenderValueAs
+            (o => Html.ActionLink("Add To My Collection", "AddToCollection", new
+            { cardName = o.CardName }));
    }).WithPaging(3).EmptyText("")
 
     </div>

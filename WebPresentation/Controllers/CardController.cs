@@ -95,6 +95,7 @@ namespace WebPresentation.Controllers
         ///
         /// Takes a Judge to the edit a card page
         /// </summary>
+        [Authorize(Roles = "Judge")]
         public ActionResult Edit(string cardName)
         {
             Card card = new Card();
@@ -198,6 +199,18 @@ namespace WebPresentation.Controllers
             string href = "https://yugipedia.com/wiki/";
             string url = href + cardType + "_" + cardCategory;
             return Redirect(url);
+        }
+
+        /// <summary>
+        /// Jory A. Wernette
+        /// Created: 2021/05/10
+        ///
+        /// Links the player to add a card to their collection
+        /// </summary>
+        [Authorize(Roles = "Judge, Player")]
+        public ActionResult AddToCollection(string cardName) 
+        {
+            return RedirectToAction("AddToCollection", "Collection", new { cardName = cardName});
         }
     }
 }
